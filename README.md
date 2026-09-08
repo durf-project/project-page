@@ -7,7 +7,11 @@ each of the six themes.
 https://admin.connect.openaire.eu/netherlands/admin-tools/helptexts?pageId=5fc76829f86fcc06d8a8e74c,
 published on https://netherlands.openaire.eu/projects.
 
-It is a self-contained fragment (no `<html>`/`<head>`/`<body>`, styles scoped under `.durf-page`) —
-copy the whole file into the helptext field. Placeholder links (marked "link to follow") and the
-provisional Federation Day date still need to be filled in as those deliverables and details are
-confirmed; see the TODO comment at the top of the file.
+It uses only [UIkit](https://getuikit.com/docs/introduction) component classes — no `<style>`,
+`<script>`, or `<iframe>` — so it passes the CKEditor content filter in the CMS's Source view and
+automatically inherits the site's own colours and fonts. Paste the whole file into the "Content"
+Source field.
+
+Placeholder links (marked "link to follow") and the provisional Federation Day date still need to be
+filled in as those deliverables and details are confirmed; see the TODO comment at the top of the
+file.
