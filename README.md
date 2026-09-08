@@ -26,3 +26,8 @@ the file for the remaining open items.
 The footer carries the EU "AI Modified" content label
 (https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content), since
 this page was drafted with AI assistance.
+
+Each theme is colour-coded using the official colour from durf-gantt's `themes.csv` (a top bar in the
+overview table, a swatch dot and heading underline, and a button accent in that theme's own section).
+Since a `<style>` block is not reliable in this CMS, the colours are applied via inline `style=""`
+attributes on individual elements rather than CSS classes.
