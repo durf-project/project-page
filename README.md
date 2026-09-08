@@ -31,3 +31,9 @@ Each theme is colour-coded using the official colour from durf-gantt's `themes.c
 overview table, a swatch dot and heading underline, and a button accent in that theme's own section).
 Since a `<style>` block is not reliable in this CMS, the colours are applied via inline `style=""`
 attributes on individual elements rather than CSS classes.
+
+Internal links (agenda/theme anchors, "back to top") are written as `/projects#agenda` rather than a
+bare `#agenda`, because netherlands.openaire.eu's client-side router resolves a bare fragment link
+relative to the site root, not the current page — clicking it landed on `/#agenda` instead of staying
+on `/projects#agenda`. If this page is ever published at a different path, find/replace `/projects#`
+with the new path throughout.

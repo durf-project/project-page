@@ -9,6 +9,12 @@
   theme — no <style>, <script>, or <iframe>, so it should pass the CKEditor content filter and
   automatically pick up the site's colours/fonts.
 
+  IMPORTANT — internal links (agenda/theme anchors, "back to top") are written as
+  "/projects#..." rather than bare "#...", because this page's client-side router resolves a
+  bare "#agenda" relative to the site root ("/#agenda") instead of the current page, losing
+  the "/projects" path. If this content is ever published at a different URL, find/replace
+  "/projects#" with "<new-path>#" throughout.
+
   The section banners below (====) are just navigation markers for editing in Plain
   Text/Source view — search for e.g. "THEME 4" to jump straight there. They are HTML
   comments and are never shown on the live page.
@@ -54,7 +60,7 @@ university rectors.
 </p>
 <p class="uk-margin-top">
 <a class="uk-button uk-button-primary uk-margin-small-right" href="https://durf-project.github.io/durf-gantt/" target="_blank" rel="noopener">📅 View the project planning (roadmap)</a>
-<a class="uk-button uk-button-default" href="#agenda">See upcoming events</a>
+<a class="uk-button uk-button-default" href="/projects#agenda">See upcoming events</a>
 </p>
 
 <!-- ============================== THEME OVERVIEW TABLE ============================== -->
@@ -63,12 +69,12 @@ university rectors.
 <table class="uk-table uk-table-divider uk-table-small uk-table-middle">
 <thead>
 <tr>
-<th style="border-top:4px solid #EE7628"><a class="uk-link-heading" href="#theme-1-governance">Theme 1: Governance</a></th>
-<th style="border-top:4px solid #F6DA44"><a class="uk-link-heading" href="#theme-2-metadata-quality">Theme 2: Metadata quality</a></th>
-<th style="border-top:4px solid #177ABF"><a class="uk-link-heading" href="#theme-3-full-text-capture">Theme 3: Full-text capture</a></th>
-<th style="border-top:4px solid #17A95D"><a class="uk-link-heading" href="#theme-4-preservation">Theme 4: Preservation</a></th>
-<th style="border-top:4px solid #5C1B61"><a class="uk-link-heading" href="#theme-5-distribution-discovery">Theme 5: Distribution &amp; discovery</a></th>
-<th style="border-top:4px solid #83201B"><a class="uk-link-heading" href="#theme-6-research-portal">Theme 6: Netherlands Research Portal</a></th>
+<th style="border-top:4px solid #EE7628"><a class="uk-link-heading" href="/projects#theme-1-governance">Theme 1: Governance</a></th>
+<th style="border-top:4px solid #F6DA44"><a class="uk-link-heading" href="/projects#theme-2-metadata-quality">Theme 2: Metadata quality</a></th>
+<th style="border-top:4px solid #177ABF"><a class="uk-link-heading" href="/projects#theme-3-full-text-capture">Theme 3: Full-text capture</a></th>
+<th style="border-top:4px solid #17A95D"><a class="uk-link-heading" href="/projects#theme-4-preservation">Theme 4: Preservation</a></th>
+<th style="border-top:4px solid #5C1B61"><a class="uk-link-heading" href="/projects#theme-5-distribution-discovery">Theme 5: Distribution &amp; discovery</a></th>
+<th style="border-top:4px solid #83201B"><a class="uk-link-heading" href="/projects#theme-6-research-portal">Theme 6: Netherlands Research Portal</a></th>
 </tr>
 </thead>
 <tbody>
@@ -139,7 +145,7 @@ university rectors.
 <h2 id="announcements" class="uk-heading-divider uk-margin-large-top">Announcements</h2>
 <ul class="uk-list uk-list-divider">
 <li><strong>DURF is officially underway.</strong> After a long stretch of preparation, the Dutch Repository Federation has started: seven grant-recipient institutions, fourteen cooperation partners, and a mandate endorsed by all Dutch university rectors.</li>
-<li><strong>Save the date: DURF Federation Day, 18 November 2026.</strong> This is the moment the project opens up to cooperation partners — places are limited to 48. See <a href="#agenda">Agenda</a>.</li>
+<li><strong>Save the date: DURF Federation Day, 18 November 2026.</strong> This is the moment the project opens up to cooperation partners — places are limited to 48. See <a href="/projects#agenda">Agenda</a>.</li>
 <li><strong>Prijsvraag: help name the Netherlands Research Portal.</strong> A naming competition for a new, memorable name for the Netherlands Research Portal will be launched around Federation Day.</li>
 <li>Questions or offers of help are welcome any time at <a href="mailto:durf@surf.nl">durf@surf.nl</a>.</li>
 </ul>
@@ -166,7 +172,7 @@ the parties maintaining repository/CRIS systems, the KB e-Depot and the OpenAIRE
 </tbody>
 </table>
 </div>
-<p><a href="#top">↑ Back to top</a></p>
+<p><a href="/projects#top">↑ Back to top</a></p>
 
 <!-- ============================== THEME 2: METADATA QUALITY ============================== -->
 <h2 id="theme-2-metadata-quality" class="uk-heading-divider uk-margin-large-top" style="border-bottom-color:#F6DA44"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#F6DA44;margin-right:.5em;vertical-align:middle" aria-hidden="true"></span>Theme 2: Metadata quality</h2>
@@ -190,7 +196,7 @@ metadata that comply with international guidelines (OpenAIRE CERIF/DC) and meet 
 </tbody>
 </table>
 </div>
-<p><a href="#top">↑ Back to top</a></p>
+<p><a href="/projects#top">↑ Back to top</a></p>
 
 <!-- ============================== THEME 3: FULL-TEXT CAPTURE ============================== -->
 <h2 id="theme-3-full-text-capture" class="uk-heading-divider uk-margin-large-top" style="border-bottom-color:#177ABF"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#177ABF;margin-right:.5em;vertical-align:middle" aria-hidden="true"></span>Theme 3: Full-text capture</h2>
@@ -211,7 +217,7 @@ secondarily for text-mining, AI usage and Taverne-mechanisms.
 </tbody>
 </table>
 </div>
-<p><a href="#top">↑ Back to top</a></p>
+<p><a href="/projects#top">↑ Back to top</a></p>
 
 <!-- ============================== THEME 4: PRESERVATION ============================== -->
 <h2 id="theme-4-preservation" class="uk-heading-divider uk-margin-large-top" style="border-bottom-color:#17A95D"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#17A95D;margin-right:.5em;vertical-align:middle" aria-hidden="true"></span>Theme 4: Preservation</h2>
@@ -232,7 +238,7 @@ persistent identifiers (URN:NBN) that keep it findable.
 </tbody>
 </table>
 </div>
-<p><a href="#top">↑ Back to top</a></p>
+<p><a href="/projects#top">↑ Back to top</a></p>
 
 <!-- ============================== THEME 5: DISTRIBUTION & DISCOVERY ============================== -->
 <h2 id="theme-5-distribution-discovery" class="uk-heading-divider uk-margin-large-top" style="border-bottom-color:#5C1B61"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#5C1B61;margin-right:.5em;vertical-align:middle" aria-hidden="true"></span>Theme 5: Distribution &amp; discovery</h2>
@@ -252,7 +258,7 @@ WorldCat and Google Scholar.
 </tbody>
 </table>
 </div>
-<p><a href="#top">↑ Back to top</a></p>
+<p><a href="/projects#top">↑ Back to top</a></p>
 
 <!-- ============================== THEME 6: NETHERLANDS RESEARCH PORTAL ============================== -->
 <h2 id="theme-6-research-portal" class="uk-heading-divider uk-margin-large-top" style="border-bottom-color:#83201B"><span style="display:inline-block;width:14px;height:14px;border-radius:50%;background:#83201B;margin-right:.5em;vertical-align:middle" aria-hidden="true"></span>Theme 6: Netherlands Research Portal</h2>
@@ -261,7 +267,7 @@ WorldCat and Google Scholar.
 <p>
 Delivers a fully-functional, user-centred Netherlands Research Portal that serves as the primary
 discovery point for Dutch research outputs. A naming competition for the portal also runs under this
-theme — see <a href="#announcements">Announcements</a>.
+theme — see <a href="/projects#announcements">Announcements</a>.
 </p>
 <div class="uk-overflow-auto">
 <table class="uk-table uk-table-divider uk-table-small uk-table-striped">
@@ -276,7 +282,7 @@ theme — see <a href="#announcements">Announcements</a>.
 </tbody>
 </table>
 </div>
-<p><a href="#top">↑ Back to top</a></p>
+<p><a href="/projects#top">↑ Back to top</a></p>
 
 <!-- ============================== FOOTER ============================== -->
 <hr class="uk-divider-icon uk-margin-large-top">
