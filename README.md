@@ -12,6 +12,17 @@ It uses only [UIkit](https://getuikit.com/docs/introduction) component classes �
 automatically inherits the site's own colours and fonts. Paste the whole file into the "Content"
 Source field.
 
-Placeholder links (marked "link to follow") and the provisional Federation Day date still need to be
-filled in as those deliverables and details are confirmed; see the TODO comment at the top of the
-file.
+The HTML has a navigation comment banner (`<!-- ==== THEME 4: PRESERVATION ==== -->`) before every
+major section, purely to make it easy to find your way around in the CMS's Plain Text/Source view —
+these comments are never shown on the live page.
+
+Per-theme progress dashboards link to https://durf-project.github.io/dashboards/ and the planning
+link goes to https://durf-project.github.io/durf-gantt/. Deliverable due dates are derived from that
+roadmap's project-month numbers (month 1 = June 2026) and are marked "Due (draft)" since they are
+computed, not independently confirmed dates. A handful of deliverables that don't have a public
+document yet are marked "not yet published" or "link to follow" — see the TODO comment at the top of
+the file for the remaining open items.
+
+The footer carries the EU "AI Modified" content label
+(https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content), since
+this page was drafted with AI assistance.

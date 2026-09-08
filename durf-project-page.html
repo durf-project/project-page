@@ -1,5 +1,7 @@
 <!--
-  DURF project page — one-pager for https://netherlands.openaire.eu
+  =====================================================================
+  DURF PROJECT PAGE — one-pager for https://netherlands.openaire.eu
+  =====================================================================
   Paste this into the "Content" Source field at:
   https://admin.connect.openaire.eu/netherlands/admin-tools/helptexts/edit?pageId=5fc76829f86fcc06d8a8e74c
 
@@ -7,22 +9,33 @@
   theme — no <style>, <script>, or <iframe>, so it should pass the CKEditor content filter and
   automatically pick up the site's colours/fonts.
 
-  EDITOR TODO before publishing — replace these placeholders:
-   - Every "link to follow" label needs a real URL once that deliverable/document exists
-     (position paper, rule book, NaMeCo, metadata application profile, capture-method
-     inventory, e-Depot reporting, index mappings, DOI policy, portal roadmap, etc.)
-   - "Progress dashboard" links currently all point to the shared
-     https://github.com/durf-project/dashboards repo. Update each to a per-theme deep link
-     once those views exist.
-   - Confirm the DURF Federation Day date (18 November 2026 is provisional, pending the
-     programme committee) and add a registration link when ready.
-   - Add/replace Agenda entries as events are scheduled.
+  The section banners below (====) are just navigation markers for editing in Plain
+  Text/Source view — search for e.g. "THEME 4" to jump straight there. They are HTML
+  comments and are never shown on the live page.
+
+  Sources used to build this page:
+   - Newsletter outline "2026-07-14 DURF communication - project start" (dates, audience,
+     Federation Day, sender bios)
+   - https://durf-project.github.io/durf-gantt/ (theme leads/partners/goals, deliverable
+     due dates — derived from project month → June 2026 = month 1)
+   - https://durf-project.github.io/dashboards/ (per-theme progress dashboards)
+
+  EDITOR TODO before publishing — still open:
+   - Deliverables shown as "not yet published" need a real URL once that document exists
+     (signed position paper, signed Federation rule book, Portal development roadmap, etc.)
+   - Portal naming competition — add a link once it launches.
+   - Federation Day registration link — add once registration opens.
+   - Every deliverables table is headed "Due (draft)": those dates are computed from the
+     roadmap's project-month numbers, not independently confirmed — drop "(draft)" once a
+     theme coordinator has signed off on that theme's dates.
 -->
 <div id="top">
 
+<!-- ============================== HEADER ============================== -->
 <h1>DURF — Dutch Repository Federation</h1>
 <p class="uk-text-lead">Making Dutch research global, open and resilient.</p>
 
+<!-- ============================== ABOUT / GOAL ============================== -->
 <h2 class="uk-heading-divider uk-margin-large-top">About the project</h2>
 <p>
 DURF coordinates the Netherlands' existing Open Science infrastructure — more than 70 institutional
@@ -38,10 +51,11 @@ institutions and fourteen cooperation partners, with a mandate unanimously endor
 university rectors.
 </p>
 <p class="uk-margin-top">
-<a class="uk-button uk-button-primary uk-margin-small-right" href="https://github.com/durf-project/durf-gantt" target="_blank" rel="noopener">📅 View the project planning (Gantt chart)</a>
+<a class="uk-button uk-button-primary uk-margin-small-right" href="https://durf-project.github.io/durf-gantt/" target="_blank" rel="noopener">📅 View the project planning (roadmap)</a>
 <a class="uk-button uk-button-default" href="#agenda">See upcoming events</a>
 </p>
 
+<!-- ============================== THEME OVERVIEW TABLE ============================== -->
 <h2 class="uk-heading-divider uk-margin-large-top">The six themes</h2>
 <div class="uk-overflow-auto">
 <table class="uk-table uk-table-divider uk-table-small uk-table-middle">
@@ -59,43 +73,43 @@ university rectors.
 <tr>
 <td>
 <ul class="uk-list uk-list-bullet uk-margin-remove">
-<li><a href="https://github.com/durf-project/dashboards">Progress dashboard</a></li>
-<li>Position paper <span class="uk-label uk-label-warning">link to follow</span></li>
-<li>Federation rule book <span class="uk-label uk-label-warning">link to follow</span></li>
+<li><a href="https://durf-project.github.io/dashboards/01-governance.html">Progress dashboard</a></li>
+<li><a href="https://www.openaire.eu/public-documents/nameco-template" target="_blank" rel="noopener">NaMeCo consortium template</a></li>
+<li>Signed position paper <span class="uk-label uk-label-warning">not yet published</span></li>
 </ul>
 </td>
 <td>
 <ul class="uk-list uk-list-bullet uk-margin-remove">
-<li><a href="https://github.com/durf-project/dashboards">Progress dashboard</a></li>
-<li>Metadata application profile <span class="uk-label uk-label-warning">link to follow</span></li>
-<li>OpenAIRE CERIF/DC mapping <span class="uk-label uk-label-warning">link to follow</span></li>
+<li><a href="https://durf-project.github.io/dashboards/02-metadata-quality.html">Progress dashboard</a></li>
+<li><a href="https://guidelines.openaire.eu/" target="_blank" rel="noopener">OpenAIRE CERIF/DC guidelines</a></li>
+<li><a href="https://www.edustandaard.nl/standaard_werkgroepen/" target="_blank" rel="noopener">EduStandaard working groups</a></li>
 </ul>
 </td>
 <td>
 <ul class="uk-list uk-list-bullet uk-margin-remove">
-<li><a href="https://github.com/durf-project/dashboards">Progress dashboard</a></li>
-<li>Baseline full-text measurement <span class="uk-label uk-label-warning">link to follow</span></li>
-<li>Capture-method inventory <span class="uk-label uk-label-warning">link to follow</span></li>
+<li><a href="https://durf-project.github.io/dashboards/03-full-text-capture.html">Progress dashboard</a></li>
+<li><a href="https://surf-ori.github.io/dashboards/cris-repository-overview.html" target="_blank" rel="noopener">CRIS/Repo health dashboard</a></li>
+<li>Capture-method inventory <span class="uk-label uk-label-warning">not yet published</span></li>
 </ul>
 </td>
 <td>
 <ul class="uk-list uk-list-bullet uk-margin-remove">
-<li><a href="https://github.com/durf-project/dashboards">Progress dashboard</a></li>
-<li>KB e-Depot reporting <span class="uk-label uk-label-warning">link to follow</span></li>
-<li>Updated NBN resolver <span class="uk-label uk-label-warning">link to follow</span></li>
+<li><a href="https://durf-project.github.io/dashboards/04-edepot-archiving.html">Progress dashboard</a></li>
+<li><a href="https://surf-ori.github.io/dashboards/cris-repository-overview.html" target="_blank" rel="noopener">CRIS/Repo health dashboard</a></li>
+<li>KB e-Depot reporting <span class="uk-label uk-label-warning">not yet published</span></li>
 </ul>
 </td>
 <td>
 <ul class="uk-list uk-list-bullet uk-margin-remove">
-<li><a href="https://github.com/durf-project/dashboards">Progress dashboard</a></li>
-<li>Index mappings &amp; best practices <span class="uk-label uk-label-warning">link to follow</span></li>
-<li>Grey-literature DOI policy <span class="uk-label uk-label-warning">link to follow</span></li>
+<li><a href="https://durf-project.github.io/dashboards/05-distribution-discovery.html">Progress dashboard</a></li>
+<li><a href="https://scholar.google.com/intl/en/scholar/inclusion.html" target="_blank" rel="noopener">Google Scholar inclusion guidelines</a></li>
+<li><a href="https://surf-ori.github.io/dashboards/cris-repository-overview.html" target="_blank" rel="noopener">CRIS/Repo health dashboard</a></li>
 </ul>
 </td>
 <td>
 <ul class="uk-list uk-list-bullet uk-margin-remove">
-<li><a href="https://github.com/durf-project/dashboards">Progress dashboard</a></li>
-<li>Development roadmap <span class="uk-label uk-label-warning">link to follow</span></li>
+<li><a href="https://durf-project.github.io/dashboards/06-nl-research-portal.html">Progress dashboard</a></li>
+<li>Development roadmap <span class="uk-label uk-label-warning">not yet published</span></li>
 <li>Portal naming competition <span class="uk-label uk-label-warning">link to follow</span></li>
 </ul>
 </td>
@@ -104,144 +118,174 @@ university rectors.
 </table>
 </div>
 
+<!-- ============================== AGENDA ============================== -->
 <h2 id="agenda" class="uk-heading-divider uk-margin-large-top">Agenda</h2>
 <h3>Upcoming</h3>
 <ul class="uk-list uk-list-divider">
 <li><span class="uk-label uk-margin-small-right">23 Sept 2026</span>Kick-off meeting with the core team and theme coordinators; consortium agreement finalised.</li>
-<li><span class="uk-label uk-margin-small-right">Oct 2026</span>First draft of the position paper on the shared information chain circulated for input; NL Research Information Content Board convened via EduStandaard.</li>
-<li><span class="uk-label uk-margin-small-right">18 Nov 2026</span>DURF Federation Day — SURF, Utrecht. For cooperation partners and their repository/CRIS, metadata and research-support colleagues (max. 48 places). Registration details to follow. <span class="uk-label uk-label-warning">date provisional</span></li>
-<li><span class="uk-label uk-margin-small-right">Winter 2026–2027</span>Work starts on the updated metadata application profile; baseline measurement of full-text availability across the federation.</li>
+<li><span class="uk-label uk-margin-small-right">Oct 2026</span>First draft of the position paper on the shared information chain circulated for input.</li>
+<li><span class="uk-label uk-margin-small-right">18 Nov 2026</span>DURF Federation Day — SURF, Utrecht. For cooperation partners and their repository/CRIS, metadata and research-support colleagues (max. 48 places). Registration details to follow.</li>
+<li><span class="uk-label uk-margin-small-right">Winter 2026–2027</span>Work continues on the updated metadata application profile and the full-text capture-method inventory.</li>
 </ul>
 <h3>Past</h3>
 <ul class="uk-list uk-list-divider">
 <li><span class="uk-label uk-label-success uk-margin-small-right">1 June 2026</span>Official start of the DURF project, awarded by NWO under the Open Science Infrastructure programme.</li>
+<li><span class="uk-label uk-label-success uk-margin-small-right">Aug 2026</span>NL Research Information Content Board formalised via EduStandaard (WISH 2.0).</li>
 </ul>
 
+<!-- ============================== ANNOUNCEMENTS ============================== -->
 <h2 id="announcements" class="uk-heading-divider uk-margin-large-top">Announcements</h2>
 <ul class="uk-list uk-list-divider">
 <li><strong>DURF is officially underway.</strong> After a long stretch of preparation, the Dutch Repository Federation has started: seven grant-recipient institutions, fourteen cooperation partners, and a mandate endorsed by all Dutch university rectors.</li>
-<li><strong>Save the date: DURF Federation Day, 18 November 2026</strong> <span class="uk-label uk-label-warning">provisional</span>. This is the moment the project opens up to cooperation partners — places are limited to 48. See <a href="#agenda">Agenda</a>.</li>
+<li><strong>Save the date: DURF Federation Day, 18 November 2026.</strong> This is the moment the project opens up to cooperation partners — places are limited to 48. See <a href="#agenda">Agenda</a>.</li>
 <li><strong>Prijsvraag: help name the Netherlands Research Portal.</strong> A naming competition for a new, memorable name for the Netherlands Research Portal will be launched around Federation Day.</li>
 <li>Questions or offers of help are welcome any time at <a href="mailto:durf@surf.nl">durf@surf.nl</a>.</li>
 </ul>
 
+<!-- ============================== THEME 1: GOVERNANCE ============================== -->
 <h2 id="theme-1-governance" class="uk-heading-divider uk-margin-large-top">Theme 1: Governance</h2>
-<p><a class="uk-button uk-button-primary uk-button-small" href="https://github.com/durf-project/dashboards" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p><a class="uk-button uk-button-primary uk-button-small" href="https://durf-project.github.io/dashboards/01-governance.html" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p class="uk-text-meta">Lead: TU Delft · Partners: SURF (community management, legal advice, project assistance)</p>
 <p>
-Establishes the shared governance layer that holds the federation together: agreement on the
-information chain between repositories, CRIS systems and national infrastructure, a rule book that
-codifies how partners cooperate, a Dutch national membership consortium for OpenAIRE (NaMeCo), and
-annual General Assemblies to keep the federation accountable to its members.
+A sustainable governance framework for the Dutch federated research information ecosystem, covering
+the parties maintaining repository/CRIS systems, the KB e-Depot and the OpenAIRE Graph.
 </p>
 <div class="uk-overflow-auto">
 <table class="uk-table uk-table-divider uk-table-small uk-table-striped">
-<thead><tr><th>Deliverable</th><th>Due</th></tr></thead>
+<thead><tr><th>Deliverable</th><th>Due (draft)</th></tr></thead>
 <tbody>
-<tr><td>Position paper on the shared information chain (first draft)</td><td>October 2026</td></tr>
-<tr><td>Federation rule book</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
-<tr><td>NaMeCo — national membership consortium for OpenAIRE</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
-<tr><td>Annual General Assembly (first edition)</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
+<tr><td>Position paper on the shared information chain, signed by stakeholders</td><td>May 2027</td></tr>
+<tr><td>NaMeCo — Dutch national membership consortium for OpenAIRE (signed agreement)</td><td>May 2027</td></tr>
+<tr><td>Federation rule book, drafted and signed</td><td>Nov 2027</td></tr>
+<tr><td>Legal guideline on metadata re-use (CC0) in CRIS systems</td><td>Nov 2026</td></tr>
+<tr><td>Project governance framework</td><td>May 2027</td></tr>
+<tr><td>Annual National Symposium &amp; General Assembly</td><td>May 2027 · May 2028 · May 2029 · May 2030</td></tr>
+<tr><td>Federation rule book updated for post-project sustainability</td><td>May 2030</td></tr>
 </tbody>
 </table>
 </div>
 <p><a href="#top">↑ Back to top</a></p>
 
+<!-- ============================== THEME 2: METADATA QUALITY ============================== -->
 <h2 id="theme-2-metadata-quality" class="uk-heading-divider uk-margin-large-top">Theme 2: Metadata quality</h2>
-<p><a class="uk-button uk-button-primary uk-button-small" href="https://github.com/durf-project/dashboards" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p><a class="uk-button uk-button-primary uk-button-small" href="https://durf-project.github.io/dashboards/02-metadata-quality.html" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p class="uk-text-meta">Lead: Leiden University · Partners: WUR (tech lead), SURF (community management, legal advice, project assistance, architect), KB (WISH)</p>
 <p>
-Raises the quality and consistency of Dutch research metadata to internationally aligned standards,
-by updating the national metadata application profile in line with OpenAIRE CERIF/DC guidelines, and
-supporting repositories and CRIS systems in adopting it.
+Repositories and CRIS systems adopt updated metadata and exchange standards for high-quality research
+metadata that comply with international guidelines (OpenAIRE CERIF/DC) and meet national requirements.
 </p>
 <div class="uk-overflow-auto">
 <table class="uk-table uk-table-divider uk-table-small uk-table-striped">
-<thead><tr><th>Deliverable</th><th>Due</th></tr></thead>
+<thead><tr><th>Deliverable</th><th>Due (draft)</th></tr></thead>
 <tbody>
-<tr><td>Updated national metadata application profile — work starts</td><td>Winter 2026–2027</td></tr>
-<tr><td>Support programme for repositories/CRIS adopting the profile</td><td><span class="uk-label">Ongoing</span></td></tr>
+<tr><td>NL Research Information Content Board formalised via EduStandaard (WISH 2.0)</td><td>Aug 2026</td></tr>
+<tr><td>Updated metadata application profile (oai_cerif and oai_dc, published at EduStandaard)</td><td>May 2027</td></tr>
+<tr><td>Repositories, CRIS systems and the KB e-Depot adopt the updated profile (16 CRIS + 31 repositories)</td><td>Nov 2027</td></tr>
+<tr><td>Compliance monitoring: OAI validator, compliance dashboard, WISH 2.0 best-practice workshops</td><td><span class="uk-label">Ongoing to May 2030</span></td></tr>
+<tr><td>Proof of concept: enriching local metadata via the OpenAIRE data broker</td><td>May 2028</td></tr>
+<tr><td>PID monitoring dashboard (ROR, ORCID, DOI presence per repository)</td><td><span class="uk-label">Ongoing to May 2030</span></td></tr>
+<tr><td>OpenAIRE Usage Counts download-statistics pilot</td><td>Nov 2027</td></tr>
 </tbody>
 </table>
 </div>
 <p><a href="#top">↑ Back to top</a></p>
 
+<!-- ============================== THEME 3: FULL-TEXT CAPTURE ============================== -->
 <h2 id="theme-3-full-text-capture" class="uk-heading-divider uk-margin-large-top">Theme 3: Full-text capture</h2>
-<p><a class="uk-button uk-button-primary uk-button-small" href="https://github.com/durf-project/dashboards" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p><a class="uk-button uk-button-primary uk-button-small" href="https://durf-project.github.io/dashboards/03-full-text-capture.html" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p class="uk-text-meta">Lead: University of Amsterdam · Partners: WUR (tech lead), SURF (community management, legal advice, project assistance)</p>
 <p>
-Increases the share of Dutch research output available as full text in repositories, by measuring
-the current baseline, taking stock of existing capture methods across institutions, and developing a
-local full-text capture service that institutions can adopt and share.
+Comprehensive full-text availability in Dutch repository/CRIS systems, primarily for preservation, and
+secondarily for text-mining, AI usage and Taverne-mechanisms.
 </p>
 <div class="uk-overflow-auto">
 <table class="uk-table uk-table-divider uk-table-small uk-table-striped">
-<thead><tr><th>Deliverable</th><th>Due</th></tr></thead>
+<thead><tr><th>Deliverable</th><th>Due (draft)</th></tr></thead>
 <tbody>
-<tr><td>Baseline measurement of full-text availability</td><td>Winter 2026–2027</td></tr>
-<tr><td>Inventory of full-text capture methods</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
-<tr><td>Shareable local full-text capture service</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
+<tr><td>Baseline metrics and reporting dashboard for full-text uptake</td><td>Nov 2026</td></tr>
+<tr><td>Inventory of existing full-text capture tools and methods</td><td>May 2027</td></tr>
+<tr><td>Local full-text capture service piloted, with shareable code and documentation</td><td>May 2028</td></tr>
+<tr><td>Ecosystem-wide rollout workshops</td><td>May 2030</td></tr>
 </tbody>
 </table>
 </div>
 <p><a href="#top">↑ Back to top</a></p>
 
+<!-- ============================== THEME 4: PRESERVATION ============================== -->
 <h2 id="theme-4-preservation" class="uk-heading-divider uk-margin-large-top">Theme 4: Preservation</h2>
-<p><a class="uk-button uk-button-primary uk-button-small" href="https://github.com/durf-project/dashboards" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p><a class="uk-button uk-button-primary uk-button-small" href="https://durf-project.github.io/dashboards/04-edepot-archiving.html" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p class="uk-text-meta">Lead: KB, National Library of the Netherlands · Partners: WUR (tech lead), SURF (legal)</p>
 <p>
-Secures long-term preservation of Dutch repository and CRIS content by archiving and monitoring it in
-the KB e-Depot, and by updating the URN:NBN resolver that keeps persistent identifiers pointing to
-the right place.
+Comprehensive, long-term preservation of Dutch scientific output in the KB e-Depot, with the
+persistent identifiers (URN:NBN) that keep it findable.
 </p>
 <div class="uk-overflow-auto">
 <table class="uk-table uk-table-divider uk-table-small uk-table-striped">
-<thead><tr><th>Deliverable</th><th>Due</th></tr></thead>
+<thead><tr><th>Deliverable</th><th>Due (draft)</th></tr></thead>
 <tbody>
-<tr><td>All Dutch repository/CRIS content archived and monitored in the KB e-Depot</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
-<tr><td>Updated URN:NBN resolver</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
+<tr><td>Pull mechanism for metadata and full text via OpenAIRE (weekly harvest, 13 CRIS + 31 repositories)</td><td>May 2027</td></tr>
+<tr><td>All Dutch CRIS/repository content archived at the KB e-Depot (3.2 million records)</td><td>May 2030</td></tr>
+<tr><td>Preservation-status monitoring dashboard</td><td>Jul 2029</td></tr>
+<tr><td>Updated URN:NBN resolver</td><td>Nov 2027</td></tr>
 </tbody>
 </table>
 </div>
 <p><a href="#top">↑ Back to top</a></p>
 
+<!-- ============================== THEME 5: DISTRIBUTION & DISCOVERY ============================== -->
 <h2 id="theme-5-distribution-discovery" class="uk-heading-divider uk-margin-large-top">Theme 5: Distribution &amp; discovery</h2>
-<p><a class="uk-button uk-button-primary uk-button-small" href="https://github.com/durf-project/dashboards" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p><a class="uk-button uk-button-primary uk-button-small" href="https://durf-project.github.io/dashboards/05-distribution-discovery.html" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p class="uk-text-meta">Lead: Leiden University · Partners: WUR (tech lead)</p>
 <p>
-Improves how findable Dutch research output is internationally: mapping metadata to major
-international indexes and documenting best practice, minting DOIs for grey literature, and
-monitoring visibility over time.
+Increases the visibility of Dutch research content in major international indexes such as OpenAlex,
+WorldCat and Google Scholar.
 </p>
 <div class="uk-overflow-auto">
 <table class="uk-table uk-table-divider uk-table-small uk-table-striped">
-<thead><tr><th>Deliverable</th><th>Due</th></tr></thead>
+<thead><tr><th>Deliverable</th><th>Due (draft)</th></tr></thead>
 <tbody>
-<tr><td>Mappings and best practices for major international indexes</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
-<tr><td>DOI minting for grey literature</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
-<tr><td>Visibility monitoring</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
+<tr><td>Mappings and best practices for major indexes (OpenAlex, WorldCat, Google Scholar)</td><td>May 2027</td></tr>
+<tr><td>DOI minting for grey literature (13 CRIS + 31 repositories)</td><td>Nov 2027</td></tr>
+<tr><td>Visibility-monitoring dashboard</td><td>Nov 2027</td></tr>
 </tbody>
 </table>
 </div>
 <p><a href="#top">↑ Back to top</a></p>
 
+<!-- ============================== THEME 6: NETHERLANDS RESEARCH PORTAL ============================== -->
 <h2 id="theme-6-research-portal" class="uk-heading-divider uk-margin-large-top">Theme 6: Netherlands Research Portal</h2>
-<p><a class="uk-button uk-button-primary uk-button-small" href="https://github.com/durf-project/dashboards" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p><a class="uk-button uk-button-primary uk-button-small" href="https://durf-project.github.io/dashboards/06-nl-research-portal.html" target="_blank" rel="noopener">📊 View the progress dashboard</a></p>
+<p class="uk-text-meta">Lead: TU Delft</p>
 <p>
-Gives the Netherlands Research Portal a steering committee and a development roadmap, delivers it in
-quarterly releases, and adds SURFconext single sign-on to OpenAIRE services. A naming competition for
-the portal will also run under this theme — see <a href="#announcements">Announcements</a>.
+Delivers a fully-functional, user-centred Netherlands Research Portal that serves as the primary
+discovery point for Dutch research outputs. A naming competition for the portal also runs under this
+theme — see <a href="#announcements">Announcements</a>.
 </p>
 <div class="uk-overflow-auto">
 <table class="uk-table uk-table-divider uk-table-small uk-table-striped">
-<thead><tr><th>Deliverable</th><th>Due</th></tr></thead>
+<thead><tr><th>Deliverable</th><th>Due (draft)</th></tr></thead>
 <tbody>
-<tr><td>Steering committee established</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
-<tr><td>Development roadmap</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
-<tr><td>Quarterly releases</td><td><span class="uk-label">Ongoing, from TBD</span></td></tr>
-<tr><td>SURFconext single sign-on to OpenAIRE services</td><td><span class="uk-label uk-label-warning">TBD</span></td></tr>
+<tr><td>Steering committee established, with rotating NaMeCo membership</td><td>Jun 2026 · refreshed Jun 2028</td></tr>
+<tr><td>Stakeholder needs assessments (customer-value report)</td><td>Nov 2026 · Nov 2027 · Nov 2028 · Nov 2029</td></tr>
+<tr><td>Development roadmap, aligned with OpenAIRE Connect</td><td>Feb 2027 · Feb 2028 · Feb 2029 · Feb 2030</td></tr>
+<tr><td>Quarterly releases, with an annual major version</td><td>May 2027 · May 2028 · May 2029 · May 2030</td></tr>
+<tr><td>SURFconext single sign-on to PROVIDE, CONNECT and MONITOR (80 institutions)</td><td>Feb 2027</td></tr>
 <tr><td>Portal naming competition</td><td>Around 18 Nov 2026</td></tr>
 </tbody>
 </table>
 </div>
 <p><a href="#top">↑ Back to top</a></p>
 
+<!-- ============================== FOOTER ============================== -->
 <hr class="uk-divider-icon uk-margin-large-top">
 <p class="uk-text-meta">Contact: <a href="mailto:durf@surf.nl">durf@surf.nl</a> · Community: <a href="https://communities.surf.nl/open-research-information" target="_blank" rel="noopener">SURF Open Research Information community</a></p>
+<p class="uk-text-meta">Deliverable dates follow the <a href="https://durf-project.github.io/durf-gantt/" target="_blank" rel="noopener">DURF project roadmap</a> (June 2026 – May 2030).</p>
+
+<!-- AI-content disclosure — https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content -->
+<p class="uk-text-meta">
+<img src="https://digital-strategy.ec.europa.eu/sites/default/files/2026-06/AI%20LABELS_3x2_AI%20MODIFIED_black.png" alt="EU AI Modified content label" width="90">
+This page was drafted with AI assistance based on materials and data provided by the DURF project team.
+<a href="https://digital-strategy.ec.europa.eu/en/policies/eu-icons-labelling-ai-generated-content" target="_blank" rel="noopener">About this label</a>.
+</p>
 
 </div>
