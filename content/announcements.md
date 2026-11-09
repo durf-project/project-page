@@ -8,7 +8,7 @@
 
 On Wednesday 18 November, from 12:00 to 17:00, the first DURF Federation Day takes place at SURF Utrecht, room 2.03. We invite all DURF co-applicants, cooperation partners and Chiefs Open Science to work together on making the Dutch scientific corpus open, available and resilient, within the existing infrastructure and organisational structures.
 
-The proposal was submitted with your help in early 2025, we received the green light at the end of 2025, the project officially started on 1 July and the kick-off with the core group took place on 23 September. Now it is time to involve the cooperation partners, the Chiefs Open Science and other stakeholders. This day is the first in a series spread over the next four years.
+The proposal was submitted with your help in early 2025, we received the green light at the end of 2025, the project officially started on 1 June and the kick-off with the core group took place on 23 September. Now it is time to involve the cooperation partners, the Chiefs Open Science and other stakeholders. This day is the first in a series spread over the next four years.
 
 We will inform you about the thematic objectives and the activities we coordinate to achieve them, and about how each institution can contribute in concrete terms. Because areas of interest and expertise differ between institutions, we use the day to establish who can contribute to what. This concerns first of all the in-kind contribution during the project period, but we will also address our shared responsibility for maintaining the infrastructure after 2030 and continuing to benefit from it.
 
