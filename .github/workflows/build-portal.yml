@@ -1,0 +1,33 @@
+# Keeps portal/durf-project-page.html (the bare HTML for netherlands.openaire.eu/projects)
+# in step with the Markdown in content/. Commits the regenerated file back to the branch.
+name: Build portal HTML
+
+on:
+  push:
+    branches: ['main']
+    paths: ['content/**', 'scripts/build-portal.mjs', 'assets/marked.min.js']
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 22
+      - run: node scripts/build-portal.mjs
+      - name: Commit the regenerated file
+        run: |
+          if git diff --quiet -- portal/durf-project-page.html; then
+            echo "portal HTML is up to date"
+          else
+            git config user.name "github-actions[bot]"
+            git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+            git add portal/durf-project-page.html
+            git commit -m "Regenerate portal/durf-project-page.html"
+            git push
+          fi

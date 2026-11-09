@@ -1,0 +1,128 @@
+<!doctype html>
+<html lang="en" data-accent="blue">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light dark">
+<title>DURF – Dutch Repository Federation</title>
+<meta name="description" content="Home of the Dutch Repository Federation (DURF): announcements, the six project themes and links to the position paper, roadmap, data contracts and dashboards.">
+<link rel="canonical" href="https://durf-project.github.io/project-page/">
+<link rel="icon" type="image/png" href="assets/durf-favicon.png">
+<meta property="og:title" content="DURF – Dutch Repository Federation">
+<meta property="og:description" content="Announcements, themes and documents of the Dutch Repository Federation.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://durf-project.github.io/project-page/">
+<!-- DURF design system: Oat UI, then durf.css, then durf-nav.js (topbar, menu,
+     theme button, ?embed). No defer: the theme must be set before first paint. -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@knadh/oat@1.0.0/oat.min.css">
+<link rel="stylesheet" href="https://durf-project.github.io/durf-design-system/durf.css">
+<script src="https://durf-project.github.io/durf-design-system/durf-nav.js"></script>
+<style>
+/* Page-specific rules only; colours, fonts, topbar, page head and footer come from durf.css */
+.durf-eyebrow {
+  margin: 0 0 .5rem;
+  font-weight: 700;
+  font-size: .8125rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent-solid);
+}
+.durf-page-head .lede { margin: .75rem 0 0; font-size: 1.1875rem; color: var(--muted-foreground); }
+.durf-content { padding-block: 2.5rem 1rem; }
+.durf-content > section + section { margin-top: 3rem; }
+.durf-content > section > h1:first-child { margin-top: 0; }
+/* announcements: one block per "##" heading */
+#announcements h2 { margin-top: 1.75rem; font-size: 1.25rem; }
+/* themes: a dot in the theme colour in front of "N. Title" */
+.durf-prose h2[data-theme]::before {
+  content: "";
+  display: inline-block;
+  width: .65rem;
+  height: .65rem;
+  margin-right: .5rem;
+  border-radius: 50%;
+  background: var(--dot);
+  vertical-align: .05em;
+}
+.durf-loading, .durf-error { color: var(--muted-foreground); font-style: italic; }
+.durf-error { font-style: normal; border-left: 3px solid var(--chart-bad); padding-left: 1rem; }
+</style>
+</head>
+<body>
+
+<header class="durf-page-head">
+  <div class="durf-shell narrow">
+    <div class="durf-page-head__inner">
+      <img class="durf-page-head__logo" src="assets/durf-logo.svg" alt="Dutch Repository Federation — making Dutch research global, open and resilient" width="136" height="136">
+      <div class="durf-page-head__text">
+        <p class="durf-eyebrow">Dutch Repository Federation</p>
+        <h1>DURF</h1>
+        <p class="lede">Making Dutch research global, open and resilient.</p>
+        <nav class="links" id="page-links" aria-label="On this page"></nav>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main class="durf-shell narrow">
+  <div id="sections" class="durf-content"><p class="durf-loading">Loading…</p></div>
+</main>
+
+<footer class="durf-footer">
+  <div class="durf-shell narrow">
+    <p>Published by the <a href="https://github.com/durf-project">Dutch Repository Federation</a>. The text on this page lives in <a href="https://github.com/durf-project/project-page/tree/main/content">content/</a> as Markdown files; <a href="https://github.com/durf-project/project-page">source on GitHub</a>, licensed under the <a href="https://github.com/durf-project/project-page/blob/main/LICENSE">EUPL v1.2</a>.</p>
+  </div>
+</footer>
+
+<script src="assets/marked.min.js"></script>
+<script>
+(function () {
+  // Order and names of the sections: content/sections.json -> content/<name>.md
+  var host = document.getElementById('sections');
+  var links = document.getElementById('page-links');
+  // Theme colours, as in the position paper and the dashboards.
+  var THEME_COLOURS = { 1: '#EE7628', 2: '#F6DA44', 3: '#177ABF', 4: '#17A95D', 5: '#5C1B61', 6: '#83201B' };
+
+  function fail(msg) {
+    host.innerHTML = '<p class="durf-error">' + msg + ' If you opened this file directly from disk, start a local server instead, ' +
+      'for example <code>python3 -m http.server</code> in this folder, and open <code>http://localhost:8000</code>.</p>';
+  }
+
+  function decorate(section) {
+    section.querySelectorAll('h2').forEach(function (h) {
+      var m = /^\s*(\d)\./.exec(h.textContent);
+      if (m && THEME_COLOURS[m[1]]) { h.setAttribute('data-theme', m[1]); h.style.setProperty('--dot', THEME_COLOURS[m[1]]); }
+    });
+  }
+
+  fetch('content/sections.json', { cache: 'no-store' })
+    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
+    .then(function (cfg) {
+      return Promise.all(cfg.sections.map(function (name) {
+        return fetch('content/' + name + '.md', { cache: 'no-store' })
+          .then(function (r) { if (!r.ok) throw new Error(name + ': ' + r.status); return r.text(); })
+          .then(function (md) { return { name: name, md: md }; });
+      }));
+    })
+    .then(function (parts) {
+      host.innerHTML = '';
+      parts.forEach(function (p) {
+        var section = document.createElement('section');
+        section.id = p.name;
+        section.className = 'durf-prose';
+        section.innerHTML = window.marked.parse(p.md, { headerIds: false, mangle: false });
+        decorate(section);
+        host.appendChild(section);
+        var h1 = section.querySelector('h1');
+        var a = document.createElement('a');
+        a.href = '#' + p.name;
+        a.textContent = h1 ? h1.textContent : p.name;
+        links.appendChild(a);
+      });
+      if (location.hash) { var t = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (t) t.scrollIntoView(); }
+    })
+    .catch(function (e) { fail('Could not load the page content (' + e.message + ').'); });
+})();
+</script>
+</body>
+</html>
