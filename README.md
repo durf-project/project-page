@@ -22,7 +22,8 @@ the browser, so there is no build step: save, push, and the published page picks
 
 - `about.md`, `announcements.md`, `themes.md` and `documents.md` are the four sections.
 - In every file the `#` heading is the section title. In `announcements.md` each
-  announcement is a `##` heading with its date, newest first.
+  announcement is a `##` heading with its date, newest first. On the page each
+  announcement is a collapsed block that opens on click.
 - In `themes.md` keep the number and the full stop at the start of each `##` heading
   (`## 3. Full Text Capture`): the page uses the number for the colour dot.
 - To add a section, create `content/<name>.md` and add `"<name>"` to `content/sections.json`.
