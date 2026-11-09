@@ -2,7 +2,8 @@
 
 Home page of the Dutch Repository Federation (DURF), published with GitHub Pages at
 **https://durf-project.github.io/project-page/**, plus a bare HTML version for
-https://netherlands.openaire.eu/projects.
+https://netherlands.openaire.eu/projects. The organisation address https://durf-project.github.io/
+forwards here (see [durf-project.github.io](https://github.com/durf-project/durf-project.github.io)).
 
 ```
 index.html                         the page, in the DURF design system
