@@ -1,3 +1,3 @@
-**DURF**, the Dutch Repository Federation, makes Dutch research global, open and resilient. Dutch university libraries, the KB National Library, SURF and OpenAIRE work on it together from 1 June 2026 to 31 May 2030. Questions? Write to [durf@surf.nl](mailto:durf@surf.nl).
+**DURF**, the Dutch Repository Federation, makes the Dutch scholarly corpus global, open and resilient. Dutch university libraries, the KB National Library, SURF and OpenAIRE work on it together from 1 June 2026 to 31 May 2030. Questions? Write to [durf@surf.nl](mailto:durf@surf.nl).
 
 The text of this page lives in [content/](https://github.com/durf-project/project-page/tree/main/content) as Markdown files. Built with the [DURF design system](https://durf-project.github.io/durf-design-system/). [Source on GitHub](https://github.com/durf-project/project-page), licensed under the [EUPL v1.2](https://github.com/durf-project/project-page/blob/main/LICENSE).
