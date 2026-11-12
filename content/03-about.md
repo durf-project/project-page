@@ -16,4 +16,4 @@ Together, the libraries are the custodians of the *Dutch Scholarly Communication
 - [Read the position paper](https://durf-project.github.io/position-paper/)
 - [Visit the portal](https://netherlands.openaire.eu/)
 
-![The DURF position paper: Dutch Scholarly Communication and the Role of University Libraries](assets/screens/position-paper.webp)
+![The Dutch Scholarly Communication Corpus as a shared resource: a bookshelf with books in the six DURF theme colours, connected by a network of links](assets/img/corpus-shared-resource.webp)
