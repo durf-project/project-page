@@ -5,7 +5,7 @@ nav: About
 eyebrow: Why DURF
 ---
 
-## A shared infrastructure for Dutch research output
+## Taking care of a valuable shared common resource: the Dutch scholarly communication corpus
 
 The **Dutch Repository Federation (DURF)** is a four-year programme, from 1 June 2026 to 31 May 2030, in which Dutch university libraries, the KB National Library, SURF and OpenAIRE work together on a shared, mature and resilient infrastructure for Dutch scientific output.
 
@@ -16,4 +16,4 @@ Together, the libraries are the custodians of the *Dutch Scholarly Communication
 - [Read the position paper](https://durf-project.github.io/position-paper/)
 - [Visit the portal](https://netherlands.openaire.eu/)
 
-![The Dutch Scholarly Communication Corpus as a shared resource: a bookshelf with books in the six DURF theme colours, connected by a network of links](assets/img/corpus-shared-resource.webp)
+![The Dutch Scholarly Communication Corpus as a shared resource: a bookshelf with books in the six DURF theme colours, connected by a network of links](assets/img/corpus-shared-resource.svg)
