@@ -15,6 +15,7 @@ Every section of the DURF home page is a Markdown file in this folder. Edit the 
 | `02-statement.md` | One sentence on a coloured band | statement |
 | `03-about.md` | About / why DURF | media |
 | `04-themes.md` | The six themes, one card each | cards |
+| `04b-team.md` | Our team: project lead, theme leads, supporting roles, steering group | cards |
 | `05-announcements.md` | Announcements, newest first, collapsed | accordion |
 | `06-timeline.md` | Milestones from proposal to project end | timeline |
 | `07-documents.md` | Documents and tools, one card each | cards |
