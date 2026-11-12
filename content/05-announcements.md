@@ -1,10 +1,21 @@
-# Announcements
+---
+layout: accordion
+id: announcements
+nav: Announcements
+eyebrow: News
+---
 
-<!-- One "##" heading per announcement, newest first. Put the date in the heading.
-     The entries below are a starting point taken from the DURF repositories:
-     check the wording and add or remove entries as you like. -->
+## Announcements, newest first
 
-## 18 November 2026: DURF Federation Day
+Open an item to read it; a link can open one straight away, like this one to the [DURF Federation Day](#durf-federation-day).
+
+<!-- One "###" item per announcement, newest first. Put the date on a "date:" line straight
+     under the heading. The heading becomes the link anchor: "### DURF Federation Day" is
+     #durf-federation-day. Items stay collapsed until a visitor opens them. -->
+
+### DURF Federation Day
+
+date: 18 November 2026
 
 On Wednesday 18 November, from 12:00 to 17:00, the first DURF Federation Day takes place at SURF Utrecht, room 2.03. We invite all DURF co-applicants, cooperation partners and Chiefs Open Science to work together on making the Dutch scientific corpus open, available and resilient, within the existing infrastructure and organisational structures.
 
@@ -14,16 +25,23 @@ We will inform you about the thematic objectives and the activities we coordinat
 
 **Programme:** lunch at 12:00, programme starts at 13:00, drinks at 16:00. Registration is required because of room capacity and dietary requirements.
 
-[Register here](https://event.surf.nl/durf-federation-day/registration/) · [Event page on SURF Communities](https://communities.surf.nl/open-research-information/evenement/durf-federation-day-18-november-2026) (in Dutch and English)
+- [Register here](https://event.surf.nl/durf-federation-day/registration/)
+- [Event page on SURF Communities (Dutch and English)](https://communities.surf.nl/open-research-information/evenement/durf-federation-day-18-november-2026)
 
-## November 2026: Metadata Monitor and Full Text Monitor online
+### Metadata Monitor and Full Text Monitor online
+
+date: November 2026
 
 The first two [DURF dashboards](https://durf-project.github.io/dashboards/) are online as proofs of concept: the Metadata Monitor (theme 2) and the Full Text Monitor (theme 3). They show real figures from a static snapshot of the SURF ORI DuckLake catalog and the OpenAIRE APIs. Charts can be embedded in other pages.
 
-## October 2026: Position paper (draft)
+### Position paper (draft)
+
+date: October 2026
 
 The draft [position paper](https://durf-project.github.io/position-paper/) is published: a call for Dutch university libraries to commit to a shared infrastructure for Dutch scientific output. Comments are welcome via the [source on GitHub](https://github.com/durf-project/position-paper).
 
-## September 2026: Data governance and the project roadmap
+### Data governance and the project roadmap
+
+date: September 2026
 
 The draft [data contracts](https://durf-project.github.io/durf-data-mesh-architecture/) page describes how every party in the federation can deliver its data as a product, according to a contract. The [project roadmap](https://durf-project.github.io/durf-gantt/) was updated with the six themes, their activities and months.
