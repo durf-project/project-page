@@ -8,7 +8,7 @@ background: muted
 
 ## One federation, six themes
 
-The six themes run in parallel from June 2026 to May 2030. Each has its own colour, which you will find back in the [roadmap](https://durf-project.github.io/durf-gantt/) and the [dashboards](https://durf-project.github.io/dashboards/). Goals, leads and partners follow the project roadmap.
+The six themes run in parallel from June 2026 to May 2030. Each has its own colour, which you will find back in the [roadmap](https://durf-project.github.io/durf-gantt/) and the [dashboards](https://durf-project.github.io/dashboards/). Goals and partners follow the project roadmap; the people behind each theme are in [our team](#team).
 
 <!-- One "###" card per theme. Keep "theme: N" straight under the heading: it sets the colour. -->
 
@@ -18,7 +18,7 @@ theme: 1
 
 A sustainable governance framework for the Dutch federated research information ecosystem, including the parties that maintain repository and CRIS systems, the e-Depot and the OpenAIRE Graph.
 
-**Lead:** Alastair Dunning (TU Delft), with co-lead Maurice Vanderfeesten (VU Amsterdam).<br>
+**Leads:** Simone Kortekaas (KB National Library) and Maurice Vanderfeesten (SURF).<br>
 **Partners:** SURF (community management, legal advice, project assistance).
 
 ### Metadata Quality Improvement
@@ -45,7 +45,7 @@ theme: 4
 
 Comprehensive preservation of Dutch scientific output in the KB e-Depot.
 
-**Lead:** Simone Kortekaas (KB National Library).<br>
+**Lead:** Ingeborg Verheul (KB National Library).<br>
 **Partners:** WUR (tech lead), SURF (legal).
 
 ### Metadata Distribution & Discovery Optimization
@@ -63,5 +63,5 @@ theme: 6
 
 A fully functional, user-centred Netherlands Research Portal that serves as the primary discovery point for Dutch research output.
 
-**Lead:** Naomi Wahls van Gils (TU Delft).<br>
+**Lead:** vacant.<br>
 **Partners:** none listed yet.
