@@ -23,10 +23,31 @@ The proposal was submitted with your help in early 2025, we received the green l
 
 We will inform you about the thematic objectives and the activities we coordinate to achieve them, and about how each institution can contribute in concrete terms. Because areas of interest and expertise differ between institutions, we use the day to establish who can contribute to what. This concerns first of all the in-kind contribution during the project period, but we will also address our shared responsibility for maintaining the infrastructure after 2030 and continuing to benefit from it.
 
-**Programme:** lunch at 12:00, programme starts at 13:00, drinks at 16:00. Registration is required because of room capacity and dietary requirements.
+#### Programme
+
+The drop-in lunch starts at 12:00. Please be on time: the official programme begins at 12:45.
+
+| Time | Programme item |
+| --- | --- |
+| 12:00 – 12:45 | Lunch |
+| 12:45 – 13:05 | Opening by host John Doove |
+| 13:05 – 13:25 | The strategic importance of DURF, presented by Hilde van Wijngaarden |
+| 13:25 – 13:45 | The DURF project plan and the importance of collaboration, presented by Maurice Vanderfeesten |
+| 13:45 – 15:15 | Deep dive into DURF's six work packages (interactive carousel), with the [theme posters](https://durf-project.github.io/durf-gantt/posters/) |
+| 15:15 – 16:00 | Keynote by Jeroen Bosman: "Resilience of open science and the research commons in times of crisis" |
+| 16:00 – 17:00 | Drinks reception |
+
+#### Venue and access
+
+SURF, Moreelsepark 48, 3511 EP Utrecht. SURF is in the Hoog Overborch office building, easy to reach by public transport. If you come by car, you can use the Hoog Catharijne car park.
+
+#### Registration
+
+Registration is required because of room capacity and dietary requirements. You can change or cancel your registration on your personal page. Questions: [durf@surf.nl](mailto:durf@surf.nl).
 
 - [Register here](https://event.surf.nl/durf-federation-day/registration/)
 - [Event page on SURF Communities (Dutch and English)](https://communities.surf.nl/open-research-information/evenement/durf-federation-day-18-november-2026)
+- [Theme posters for the carousel](https://durf-project.github.io/durf-gantt/posters/) (A3, printable)
 
 ### Metadata Monitor and Full Text Monitor online
 
