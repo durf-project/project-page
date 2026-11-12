@@ -21,6 +21,72 @@
 <link rel="stylesheet" href="https://durf-project.github.io/durf-design-system/durf.css">
 <link rel="stylesheet" href="https://durf-project.github.io/durf-design-system/durf-site.css">
 <script src="https://durf-project.github.io/durf-design-system/durf-nav.js"></script>
+<style>
+/* The Corpus dialog, loaded from the position paper (same styles as there). */
+.durf-commons-more { margin-top: 1.5rem; }
+dialog.durf-dialog {
+  width: min(40rem, calc(100vw - 2rem));
+  max-height: calc(100vh - 2rem);
+  padding: 0;
+  border: .0625rem solid var(--border);
+  border-radius: .75rem;
+  background: var(--background);
+  color: var(--foreground);
+  box-shadow: 0 1.5rem 3rem color-mix(in srgb, var(--durf-black) 25%, transparent);
+}
+dialog.durf-dialog::backdrop { background: color-mix(in srgb, var(--durf-black) 55%, transparent); }
+dialog.durf-dialog form { display: flex; flex-direction: column; max-height: calc(100vh - 2rem); margin: 0; }
+dialog.durf-dialog header { padding: 1.25rem 1.5rem .75rem; border-bottom: .0625rem solid var(--border); }
+dialog.durf-dialog header h3 { margin: 0; font-size: 1.25rem; line-height: 1.3; }
+dialog.durf-dialog .durf-dialog-kicker {
+  margin: 0 0 .25rem;
+  font-family: var(--font-sans);
+  font-size: .6875rem;
+  font-weight: 700;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  color: var(--accent-solid);
+}
+dialog.durf-dialog .durf-dialog-body { position: relative; padding: .5rem 1.5rem; overflow-y: auto; }
+dialog.durf-dialog .durf-dialog-body p, dialog.durf-dialog .durf-dialog-body li { font-size: 1rem; line-height: 1.55; }
+dialog.durf-dialog .durf-dialog-body ul,
+dialog.durf-dialog .durf-dialog-body ol { margin-top: .25rem; }
+dialog.durf-dialog .durf-dialog-body h4 {
+  margin: 1.75rem 0 .5rem;
+  padding-top: 1.25rem;
+  border-top: .0625rem solid var(--border);
+  font-family: var(--font-heading);
+  font-size: 1.0625rem;
+  font-weight: 800;
+  scroll-margin-top: .5rem;
+}
+dialog.durf-dialog .durf-dialog-body h4#corpus-ostrom { margin-top: 1.25rem; padding-top: 0; border-top: 0; }
+dialog.durf-dialog .durf-dialog-body .durf-dialog-refs {
+  margin-top: 1.25rem;
+  padding-top: 1rem;
+  border-top: .0625rem solid var(--border);
+  font-size: .875rem;
+  line-height: 1.5;
+  color: var(--muted-foreground);
+}
+dialog.durf-dialog .durf-dialog-body .durf-dialog-refs p { margin: 0 0 .5rem; font-size: inherit; line-height: inherit; }
+dialog.durf-dialog .durf-dialog-refs strong { color: var(--foreground); }
+dialog.durf-dialog .durf-dialog-refs cite { font-style: italic; }
+dialog.durf-dialog .durf-dialog-refs a { overflow-wrap: anywhere; }
+
+dialog.durf-dialog footer { display: flex; justify-content: flex-end; padding: .75rem 1.5rem 1.25rem; border-top: .0625rem solid var(--border); }
+dialog.durf-dialog footer button {
+  padding: .5rem 1.25rem;
+  border: 0;
+  border-radius: .375rem;
+  background: var(--accent-solid);
+  color: var(--accent-on);
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--accent-solid); outline-offset: .125rem; }
+</style>
 <script src="https://durf-project.github.io/durf-design-system/lib/oat.min.js" defer></script>
 <script src="https://durf-project.github.io/durf-design-system/lib/marked.min.js" defer></script>
 <script src="https://durf-project.github.io/durf-design-system/durf-site.js" defer></script>
@@ -46,7 +112,7 @@
 <noscript><div class="durf-shell"><p>This page needs JavaScript to render its content. The texts are also readable on GitHub in the <a href="https://github.com/durf-project/project-page/tree/main/content">content folder</a>, and as plain HTML in <a href="portal/durf-project-page.html">portal/durf-project-page.html</a>.</p></div></noscript>
 
 <script>
-// Two small behaviours on top of the design system:
+// Small behaviours on top of the design system: the Corpus dialog (below),
 // a link to #some-announcement opens that item, also after the page has loaded, and
 // a link to the feedback issue form opens the feedback dialog of the page instead (the link stays as fallback).
 (function () {
@@ -59,6 +125,36 @@
   document.addEventListener('durf:rendered', function () {
     var t = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
     if (t) t.scrollIntoView({ behavior: 'instant' });
+  });
+  // "Read more about the Corpus as a commons": open the Corpus dialog of the position paper,
+  // taken from position-paper.md so the text is exactly the same, at its commons part.
+  // If loading fails, the link to the position paper is followed instead.
+  var PAPER_MD = 'https://durf-project.github.io/position-paper/position-paper.md';
+  var corpusDialog = null;
+  function showCorpus(dlg) {
+    if (!dlg.open) dlg.showModal();
+    window.requestAnimationFrame(function () {
+      var body = dlg.querySelector('.durf-dialog-body'), t = dlg.querySelector('#corpus-commons');
+      if (body && t) body.scrollTop = t.offsetTop - 8;
+    });
+  }
+  document.addEventListener('click', function (e) {
+    var more = e.target.closest && e.target.closest('[data-corpus-dialog]');
+    if (!more) return;
+    e.preventDefault();
+    if (corpusDialog) return showCorpus(corpusDialog);
+    fetch(PAPER_MD).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(function (md) {
+      var m = /<dialog id="corpus-definition"[\s\S]*?<\/dialog>/.exec(md);
+      if (!m) throw new Error('no dialog');
+      var tpl = document.createElement('template'); tpl.innerHTML = m[0];
+      var dlg = tpl.content.querySelector('dialog');
+      dlg.querySelectorAll('a[href]').forEach(function (a) { a.target = '_blank'; a.rel = 'noopener'; });
+      dlg.querySelector('footer button').addEventListener('click', function (ev) { ev.preventDefault(); dlg.close(); });
+      if (!('closedBy' in HTMLDialogElement.prototype)) dlg.addEventListener('click', function (ev) { if (ev.target === dlg) dlg.close(); });
+      document.body.appendChild(dlg);
+      corpusDialog = dlg;
+      showCorpus(dlg);
+    }).catch(function () { location.href = more.href; });
   });
   document.addEventListener('click', function (e) {
     var a = e.target.closest && e.target.closest('a[href*="/issues/new?template=feedback.yml"]');
