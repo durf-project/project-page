@@ -1,1 +1,11 @@
-{ "sections": ["about", "announcements", "themes", "documents"] }
+[
+  "00-hero.md",
+  "01-figures.md",
+  "02-statement.md",
+  "03-about.md",
+  "04-themes.md",
+  "05-announcements.md",
+  "06-timeline.md",
+  "07-documents.md",
+  "08-get-involved.md"
+]

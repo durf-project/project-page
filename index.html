@@ -2,145 +2,70 @@
 <html lang="en" data-accent="blue">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
 <meta name="color-scheme" content="light dark">
-<title>DURF – Dutch Repository Federation</title>
-<meta name="description" content="Home of the Dutch Repository Federation (DURF): announcements, the six project themes and links to the position paper, roadmap, data contracts and dashboards.">
+<title>DURF · Dutch Repository Federation</title>
+<meta name="description" content="DURF, the Dutch Repository Federation, makes Dutch research global, open and resilient: key figures, the six themes, announcements, the timeline and links to the position paper, roadmap, data contracts and dashboards.">
 <link rel="canonical" href="https://durf-project.github.io/project-page/">
-<link rel="icon" type="image/png" href="assets/durf-favicon.png">
-<meta property="og:title" content="DURF – Dutch Repository Federation">
-<meta property="og:description" content="Announcements, themes and documents of the Dutch Repository Federation.">
+<meta property="og:title" content="DURF · Dutch Repository Federation">
+<meta property="og:description" content="Making Dutch research global, open and resilient, together.">
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://durf-project.github.io/project-page/">
-<!-- DURF design system: Oat UI, then durf.css, then durf-nav.js (topbar, menu,
-     theme button, ?embed). No defer: the theme must be set before first paint. -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@knadh/oat@1.0.0/oat.min.css">
+<meta property="og:image" content="https://durf-project.github.io/durf-design-system/assets/durf-og.png">
+<link rel="icon" type="image/svg+xml" href="https://durf-project.github.io/durf-design-system/assets/favicon.svg">
+<link rel="apple-touch-icon" href="https://durf-project.github.io/durf-design-system/assets/apple-touch-icon.png">
+
+<!-- DURF design system v1.1: Oat, tokens, site components; durf-nav.js without defer (no flash of the wrong theme).
+     The page itself has no styles: every section comes from content/*.md, rendered by durf-site.js. -->
+<link rel="stylesheet" href="https://durf-project.github.io/durf-design-system/lib/oat.min.css">
 <link rel="stylesheet" href="https://durf-project.github.io/durf-design-system/durf.css">
+<link rel="stylesheet" href="https://durf-project.github.io/durf-design-system/durf-site.css">
 <script src="https://durf-project.github.io/durf-design-system/durf-nav.js"></script>
-<style>
-/* Page-specific rules only; colours, fonts, topbar, page head and footer come from durf.css */
-.durf-eyebrow {
-  margin: 0 0 .5rem;
-  font-weight: 700;
-  font-size: .8125rem;
-  letter-spacing: .08em;
-  text-transform: uppercase;
-  color: var(--accent-solid);
-}
-.durf-page-head .lede { margin: .75rem 0 0; font-size: 1.1875rem; color: var(--muted-foreground); }
-.durf-content { padding-block: 2.5rem 1rem; }
-.durf-content > section + section { margin-top: 3rem; }
-.durf-content > section > h1:first-child { margin-top: 0; }
-/* announcements: each "##" heading becomes a collapsed accordion (Oat's details/summary) */
-#announcements details { margin: 0; }
-#announcements details + details { margin-top: -1px; }
-#announcements summary { font-family: var(--font-heading); font-weight: 800; font-size: 1.0625rem; line-height: 1.3; }
-#announcements details > :not(summary) { margin: 0 var(--space-4, 1rem) 1rem; }
-#announcements details > p:first-of-type { margin-top: 1rem; }
-/* themes: a dot in the theme colour in front of "N. Title" */
-.durf-prose h2[data-theme]::before {
-  content: "";
-  display: inline-block;
-  width: .65rem;
-  height: .65rem;
-  margin-right: .5rem;
-  border-radius: 50%;
-  background: var(--dot);
-  vertical-align: .05em;
-}
-.durf-loading, .durf-error { color: var(--muted-foreground); font-style: italic; }
-.durf-error { font-style: normal; border-left: 3px solid var(--chart-bad); padding-left: 1rem; }
-</style>
+<script src="https://durf-project.github.io/durf-design-system/lib/oat.min.js" defer></script>
+<script src="https://durf-project.github.io/durf-design-system/lib/marked.min.js" defer></script>
+<script src="https://durf-project.github.io/durf-design-system/durf-site.js" defer></script>
 </head>
 <body>
 
-<header class="durf-page-head">
-  <div class="durf-shell narrow">
-    <div class="durf-page-head__inner">
-      <img class="durf-page-head__logo" src="assets/durf-logo.svg" alt="Dutch Repository Federation — making Dutch research global, open and resilient" width="136" height="136">
-      <div class="durf-page-head__text">
-        <p class="durf-eyebrow">Dutch Repository Federation</p>
-        <h1>DURF</h1>
-        <p class="lede">Making Dutch research global, open and resilient.</p>
-        <nav class="links" id="page-links" aria-label="On this page"></nav>
-      </div>
-    </div>
-  </div>
-</header>
+<nav class="durf-subnav" aria-label="On this page">
+  <div class="durf-shell durf-subnav__inner" data-durf-section-nav></div>
+</nav>
 
-<main class="durf-shell narrow">
-  <div id="sections" class="durf-content"><p class="durf-loading">Loading…</p></div>
+<main id="durf-sections">
+  <p class="durf-loading">Loading…</p>
 </main>
 
-<footer class="durf-footer">
-  <div class="durf-shell narrow">
-    <p>Published by the <a href="https://github.com/durf-project">Dutch Repository Federation</a>. The text on this page lives in <a href="https://github.com/durf-project/project-page/tree/main/content">content/</a> as Markdown files; <a href="https://github.com/durf-project/project-page">source on GitHub</a>, licensed under the <a href="https://github.com/durf-project/project-page/blob/main/LICENSE">EUPL v1.2</a>.</p>
+<footer class="durf-footer durf-footer--site">
+  <div class="durf-colour-strip" aria-hidden="true"></div>
+  <div class="durf-shell durf-footer__inner">
+    <img class="durf-footer__logo" src="https://durf-project.github.io/durf-design-system/assets/durf-logo.svg" alt="DURF, Dutch Repository Federation">
+    <div class="durf-footer__text" id="durf-footer"></div>
   </div>
 </footer>
 
-<script src="assets/marked.min.js"></script>
+<noscript><div class="durf-shell"><p>This page needs JavaScript to render its content. The texts are also readable on GitHub in the <a href="https://github.com/durf-project/project-page/tree/main/content">content folder</a>, and as plain HTML in <a href="portal/durf-project-page.html">portal/durf-project-page.html</a>.</p></div></noscript>
+
 <script>
+// Two small behaviours on top of the design system:
+// a link to #some-announcement opens that item, also after the page has loaded, and
+// a link to the feedback issue form opens the feedback dialog of the page instead (the link stays as fallback).
 (function () {
-  // Order and names of the sections: content/sections.json -> content/<name>.md
-  var host = document.getElementById('sections');
-  var links = document.getElementById('page-links');
-  // Theme colours, as in the position paper and the dashboards.
-  var THEME_COLOURS = { 1: '#EE7628', 2: '#F6DA44', 3: '#177ABF', 4: '#17A95D', 5: '#5C1B61', 6: '#83201B' };
-
-  function fail(msg) {
-    host.innerHTML = '<p class="durf-error">' + msg + ' If you opened this file directly from disk, start a local server instead, ' +
-      'for example <code>python3 -m http.server</code> in this folder, and open <code>http://localhost:8000</code>.</p>';
+  function openHash() {
+    var t = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (t && t.tagName === 'DETAILS' && !t.open) { t.open = true; t.scrollIntoView(); }
   }
-
-  // Announcements: wrap each "##" heading and the text under it in a collapsed <details>.
-  function collapseAnnouncements(section) {
-    section.querySelectorAll('h2').forEach(function (h) {
-      var d = document.createElement('details');
-      var sm = document.createElement('summary');
-      sm.innerHTML = h.innerHTML;
-      d.appendChild(sm);
-      if (h.id) d.id = h.id;
-      var n = h.nextElementSibling;
-      while (n && n.tagName !== 'H2' && n.tagName !== 'H1') { var next = n.nextElementSibling; d.appendChild(n); n = next; }
-      h.replaceWith(d);
-    });
-  }
-
-  function decorate(section) {
-    section.querySelectorAll('h2').forEach(function (h) {
-      var m = /^\s*(\d)\./.exec(h.textContent);
-      if (m && THEME_COLOURS[m[1]]) { h.setAttribute('data-theme', m[1]); h.style.setProperty('--dot', THEME_COLOURS[m[1]]); }
-    });
-  }
-
-  fetch('content/sections.json', { cache: 'no-store' })
-    .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
-    .then(function (cfg) {
-      return Promise.all(cfg.sections.map(function (name) {
-        return fetch('content/' + name + '.md', { cache: 'no-store' })
-          .then(function (r) { if (!r.ok) throw new Error(name + ': ' + r.status); return r.text(); })
-          .then(function (md) { return { name: name, md: md }; });
-      }));
-    })
-    .then(function (parts) {
-      host.innerHTML = '';
-      parts.forEach(function (p) {
-        var section = document.createElement('section');
-        section.id = p.name;
-        section.className = 'durf-prose';
-        section.innerHTML = window.marked.parse(p.md, { headerIds: false, mangle: false });
-        decorate(section);
-        if (p.name === 'announcements') collapseAnnouncements(section);
-        host.appendChild(section);
-        var h1 = section.querySelector('h1');
-        var a = document.createElement('a');
-        a.href = '#' + p.name;
-        a.textContent = h1 ? h1.textContent : p.name;
-        links.appendChild(a);
-      });
-      if (location.hash) { var t = document.getElementById(decodeURIComponent(location.hash.slice(1))); if (t) t.scrollIntoView(); }
-    })
-    .catch(function (e) { fail('Could not load the page content (' + e.message + ').'); });
+  window.addEventListener('hashchange', openHash);
+  // On load, jump to the #target at once: a smooth scroll lands too far while the pictures above it load.
+  document.addEventListener('durf:rendered', function () {
+    var t = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (t) t.scrollIntoView({ behavior: 'instant' });
+  });
+  document.addEventListener('click', function (e) {
+    var a = e.target.closest && e.target.closest('a[href*="/issues/new?template=feedback.yml"]');
+    var host = a && document.getElementById('durf-feedback');
+    var fab = host && host.shadowRoot && host.shadowRoot.querySelector('.fab');
+    if (fab) { e.preventDefault(); fab.click(); }
+  });
 })();
 </script>
 </body>
