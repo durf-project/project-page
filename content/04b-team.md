@@ -37,7 +37,7 @@ The project lead coordinates the six themes and is the first point of contact fo
 
 ### Steering group
 
-- **Hilde van Wijngaarde** (VU Amsterdam), chair and executive
+- **Hilde van Wijngaarden** (VU Amsterdam), chair and executive
 - **Mariëlle Prevoo** (Maastricht University), senior user
 - **John Doove** (SURF), senior supplier
 - **Paolo Manghi** (OpenAIRE), senior supplier
