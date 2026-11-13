@@ -13,7 +13,7 @@ image2-alt: The Netherlands Research Portal
 
 # Making the Dutch scholarly corpus *global, open and resilient*
 
-Dutch university libraries, the KB National Library, SURF and OpenAIRE work together on a shared, mature and resilient infrastructure for Dutch scientific output. Together we reinforce the Netherlands Research Portal and the landscape of institutional repositories and CRIS systems, so that Dutch research output is more robust, sovereign and findable.
+Dutch university libraries, the KB National Library, SURF and OpenAIRE work together on a shared, mature and resilient infrastructure for Dutch scholarly output. Together we reinforce the Netherlands Research Portal and the landscape of institutional repositories and CRIS systems, so that Dutch scholarly output is more robust, sovereign and findable.
 
 - [Register for Federation Day](https://event.surf.nl/durf-federation-day/registration/)
 - [Position paper](https://durf-project.github.io/position-paper/)

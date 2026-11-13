@@ -59,7 +59,7 @@ The first two [DURF dashboards](https://durf-project.github.io/dashboards/) are 
 
 date: October 2026
 
-The draft [position paper](https://durf-project.github.io/position-paper/) is published: a call for Dutch university libraries to commit to a shared infrastructure for Dutch scientific output. Comments are welcome via the [source on GitHub](https://github.com/durf-project/position-paper).
+The draft [position paper](https://durf-project.github.io/position-paper/) is published: a call for Dutch university libraries to commit to a shared infrastructure for Dutch scholarly output. Comments are welcome via the [source on GitHub](https://github.com/durf-project/position-paper).
 
 ### Data governance and the project roadmap
 

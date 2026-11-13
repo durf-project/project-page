@@ -43,7 +43,7 @@ Comprehensive full-text availability in Dutch repository and CRIS systems, prima
 
 theme: 4
 
-Comprehensive preservation of Dutch scientific output in the KB e-Depot.
+Comprehensive preservation of Dutch scholarly output in the KB e-Depot.
 
 **Lead:** Ingeborg Verheul (KB National Library).<br>
 **Partners:** WUR (tech lead), SURF (legal).
@@ -61,7 +61,7 @@ Increase the visibility of Dutch research content in major international indexes
 
 theme: 6
 
-A fully functional, user-centred Netherlands Research Portal that serves as the primary discovery point for Dutch research output.
+A fully functional, user-centred Netherlands Research Portal that serves as the primary discovery point for Dutch scholarly output.
 
 **Lead:** vacant.<br>
 **Partners:** none listed yet.
