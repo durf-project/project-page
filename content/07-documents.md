@@ -59,7 +59,7 @@ tags: Discovery, Live
 
 ![The Netherlands Research Portal](assets/screens/research-portal.webp)
 
-The national discovery point for Dutch research output, built on OpenAIRE.
+The national discovery point for Dutch scholarly output, built on OpenAIRE.
 
 - [Visit the portal](https://netherlands.openaire.eu/)
 
