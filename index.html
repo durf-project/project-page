@@ -24,6 +24,10 @@
 <style>
 /* The Corpus dialog, loaded from the position paper (same styles as there). */
 .durf-commons-more { margin-top: 1.5rem; }
+/* The circles picture of the federation uses the full width; the text keeps its reading width. */
+#federation .durf-site-prose, #federation .durf-section-head { max-width: none; }
+#federation .durf-section-head > :not(p:has(img)) { max-width: 46rem; }
+#federation img { display: block; width: 100%; height: auto; }
 dialog.durf-dialog {
   width: min(40rem, calc(100vw - 2rem));
   max-height: calc(100vh - 2rem);
