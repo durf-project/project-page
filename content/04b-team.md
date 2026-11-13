@@ -41,3 +41,25 @@ The project lead coordinates the six themes and is the first point of contact fo
 - **Mariëlle Prevoo** (Maastricht University), senior user
 - **John Doove** (SURF), senior supplier
 - **Paolo Manghi** (OpenAIRE), senior supplier
+
+### Cooperation partners
+
+These institutions support DURF in kind and, with the co-applicants, are the custodians of the Dutch Scholarly Communication Corpus.
+
+- Vrije Universiteit Amsterdam
+- Maastricht University
+- SURF
+- Open Universiteit
+- Radboud University
+- University of Groningen
+- Eindhoven University of Technology
+- Tilburg University
+- Leiden University
+- University of Twente
+- Utrecht University
+- University of Humanistic Studies
+- Wageningen University & Research
+- Amsterdam UMC, for the university medical centres (NFU)
+- Saxion University of Applied Sciences, for the universities of applied sciences
+
+The co-applicants are the KB National Library, SURF, TU Delft, the University of Amsterdam, Leiden University, VU Amsterdam and Wageningen University & Research. OpenAIRE takes part as a third party.
