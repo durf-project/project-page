@@ -12,4 +12,4 @@ The DURF project helps the federation get organised, with theme leads, supportin
 
 Other organisations, such as DANS, CWI, RIVM and the Netherlands eScience Center, belong to the federation as well, even though they are not (yet) part of the project. Point at a circle, or tap it, to see who takes part.
 
-[![The DURF Federation in the middle, with the institutions that take care of the Corpus; on the left the DURF project with theme leads, support, steering group and cooperation partners; on the right the community groups WISH, PUGNL, UKB, NaMeCo and COS, connected to the federation](assets/img/durf-circles.svg)](assets/img/durf-circles.svg)
+[![The DURF Federation in the middle, with the institutions that take care of the Corpus; on the left the DURF project with theme leads, project lead and support, steering group and cooperation partners; on the right the community groups WISH, PUGNL, UKB, NaMeCo and COS, connected to the federation](assets/img/durf-circles.svg)](assets/img/durf-circles.svg)
