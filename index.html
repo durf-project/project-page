@@ -26,8 +26,22 @@
 .durf-commons-more { margin-top: 1.5rem; }
 /* The circles picture of the federation uses the full width; the text keeps its reading width. */
 #federation .durf-site-prose, #federation .durf-section-head { max-width: none; }
-#federation .durf-section-head > :not(p:has(img)) { max-width: 46rem; }
-#federation img { display: block; width: 100%; height: auto; }
+#federation .durf-section-head > :not(p:has(img), .dc-wrap) { max-width: 46rem; }
+/* On narrow screens the picture keeps a readable size and scrolls sideways. */
+#federation .dc-wrap { overflow-x: auto; -webkit-overflow-scrolling: touch; border-radius: var(--radius-medium, .75rem); }
+@media (max-width: 60rem) { #federation .dc-wrap svg.durf-circles { width: 60rem; max-width: none; } }
+#federation img, #federation svg.durf-circles { display: block; width: 100%; height: auto; }
+/* Interactive circles: a group lights up its members in the federation in its own colour. */
+svg.durf-circles .dc-group { cursor: pointer; outline: none; }
+svg.durf-circles .dc-dot { transition: stroke-width .15s ease; }
+svg.durf-circles .dc-group:hover .dc-dot, svg.durf-circles .dc-group:focus-visible .dc-dot,
+svg.durf-circles .dc-group.is-active .dc-dot { stroke-width: 8; }
+svg.durf-circles .dc-inst { transition: opacity .15s ease; }
+svg.durf-circles .dc-inst rect { transition: fill .15s ease, stroke .15s ease; }
+svg.durf-circles[data-active] .dc-inst:not(.is-on) { opacity: .4; }
+svg.durf-circles .dc-inst.is-on rect { fill: var(--dc-color); stroke: var(--dc-color); }
+svg.durf-circles .dc-inst.is-on .dc-label { fill: var(--dc-on); }
+@media (prefers-reduced-motion: reduce) { svg.durf-circles * { transition: none !important; } }
 dialog.durf-dialog {
   width: min(40rem, calc(100vw - 2rem));
   max-height: calc(100vh - 2rem);
@@ -142,6 +156,52 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
       if (body && t) body.scrollTop = t.offsetTop - 8;
     });
   }
+  // The federation picture: put the SVG inline so its circles can be pointed at. A group circle
+  // lights up its members in the federation in the group's colour, on hover, focus or tap.
+  // Without JavaScript the picture stays a plain image.
+  function circles() {
+    var img = document.querySelector('#federation img[src*="durf-circles.svg"]');
+    if (!img) return;
+    fetch(img.src).then(function (r) { if (!r.ok) throw new Error(r.status); return r.text(); }).then(function (text) {
+      var tpl = document.createElement('template'); tpl.innerHTML = text.trim();
+      var svg = tpl.content.querySelector('svg');
+      if (!svg) return;
+      svg.removeAttribute('width'); svg.removeAttribute('height');
+      var holder = img.closest('p') || img.closest('a') || img;
+      var wrap = document.createElement('div');
+      wrap.className = 'dc-wrap';
+      wrap.appendChild(svg);
+      holder.replaceWith(wrap);
+      var pinned = null;
+      function show(g) {
+        var key = g && g.dataset.group;
+        if (key) {
+          svg.setAttribute('data-active', key);
+          svg.style.setProperty('--dc-color', g.dataset.color);
+          svg.style.setProperty('--dc-on', g.dataset.on);
+        } else svg.removeAttribute('data-active');
+        svg.querySelectorAll('.dc-inst').forEach(function (i) {
+          i.classList.toggle('is-on', !!key && (' ' + i.dataset.groups + ' ').indexOf(' ' + key + ' ') >= 0);
+        });
+        svg.querySelectorAll('.dc-group').forEach(function (x) {
+          x.classList.toggle('is-active', x === g);
+          x.setAttribute('aria-pressed', x === pinned ? 'true' : 'false');
+        });
+      }
+      svg.querySelectorAll('.dc-group').forEach(function (g) {
+        g.addEventListener('mouseenter', function () { show(g); });
+        g.addEventListener('mouseleave', function () { show(pinned); });
+        g.addEventListener('focus', function () { show(g); });
+        g.addEventListener('blur', function () { show(pinned); });
+        g.addEventListener('click', function () { pinned = pinned === g ? null : g; show(pinned || g); if (!pinned) show(null); });
+        g.addEventListener('keydown', function (e) {
+          if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); g.dispatchEvent(new MouseEvent('click')); }
+          if (e.key === 'Escape') { pinned = null; show(null); }
+        });
+      });
+    }).catch(function () { /* keep the plain image */ });
+  }
+  document.addEventListener('durf:rendered', circles);
   document.addEventListener('click', function (e) {
     var more = e.target.closest && e.target.closest('[data-corpus-dialog]');
     if (!more) return;
