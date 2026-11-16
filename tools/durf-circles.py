@@ -46,7 +46,7 @@ NOT_YET = [
 UNIS = ["eur", "leiden", "um", "ou", "ru", "tilburg", "tud", "tue", "uva", "rug", "uvh", "ut", "uu", "vu", "wur"]
 PROJECT = [
     ("theme-leads", "Theme leads", ["kb", "surf", "leiden", "uva"]),
-    ("support", "Support", ["wur", "surf"]),
+    ("support", "Project lead\nand support", ["vu", "wur", "surf"]),
     ("steering", "Steering\ngroup", ["vu", "um", "surf", "openaire"]),
     ("partners", "Cooperation\npartners", ["vu", "um", "eur", "ou", "ru", "rug", "tue", "tilburg", "leiden", "ut",
                                             "uu", "uvh", "wur", "aumc", "saxion"]),
@@ -94,12 +94,18 @@ def text(txt, x, y, size, kind="title", fill=INK, cls=None, lh=1.15):
             if DEFS[gid]:
                 out.append(f'<use href="#{gid}" transform="translate({x0:.1f} {base:.1f}) scale({s:.5f} {-s:.5f})"/>')
             x0 += gs[n].width * s
-    c = f' class="{cls}"' if cls else ""
+    tone = {INK: "dc-ink", MUTED: "dc-muted", NAVY: "dc-title"}.get(fill, "")
+    c = " ".join(x for x in (cls, tone) if x)
+    c = f' class="{c}"' if c else ""
     return f'<g fill="{fill}"{c}>' + "".join(out) + "</g>"
 
 def circle(cx, cy, r, fill, stroke, width=2.5, cls=None):
-    c = f' class="{cls}"' if cls else ""
-    return f'<circle{c} cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" fill="{fill}" stroke="{stroke}" stroke-width="{width}"/>'
+    """Tinted circles get class dc-tint and their colour in --dc-c, white ones dc-card,
+    so the page can redraw them in its own (dark) colours."""
+    kind = "dc-card" if fill == "#fff" else "dc-tint"
+    c = " ".join(x for x in (cls, kind) if x)
+    return (f'<circle class="{c}" style="--dc-c:{stroke}" cx="{cx:.1f}" cy="{cy:.1f}" r="{r}" '
+            f'fill="{fill}" stroke="{stroke}" stroke-width="{width}"/>')
 
 def dashed(x1, y1, x2, y2):
     return f'<line x1="{x1:.1f}" y1="{y1:.1f}" x2="{x2:.1f}" y2="{y2:.1f}" stroke="{LINE}" stroke-width="3" stroke-dasharray="10 9" stroke-linecap="round"/>'
@@ -111,7 +117,7 @@ def group_attrs(key, label, colour):
 
 # ---- layout ---------------------------------------------------------------------------------
 W, H = 1900, 1100
-P = [f'<rect width="{W}" height="{H}" fill="#fff"/>']
+P = [f'<rect class="dc-bg" width="{W}" height="{H}" fill="#fff"/>']
 FX, FY, FR = 955, 550, 505          # the federation
 LX, LY, LR = 205, 550, 190          # the project
 CX, CR = 1795, 82                   # the community groups
@@ -138,13 +144,14 @@ for i, (key, label, dashed_box) in enumerate(items):
     n = min(COLS, len(items) - r * COLS)
     x = FX + (c - (n - 1) / 2) * (RW + GAP); y = FY + 40 + (r - (nrows - 1) / 2) * STEP
     dash = ' stroke-dasharray="7 6"' if dashed_box else ""
+    box_cls = "dc-later" if dashed_box else "dc-card"
     fill = "#F7FAFD" if dashed_box else "#fff"
     P.append(f'<g class="dc-inst{" dc-inst--later" if dashed_box else ""}" data-key="{key}" data-groups="{" ".join(member_of.get(key, []))}">'
-             f'<rect x="{x - RW / 2:.1f}" y="{y - RH / 2:.1f}" width="{RW}" height="{RH}" rx="11" fill="{fill}" stroke="{FED_C[0]}" stroke-width="2.2"{dash}/>'
+             f'<rect x="{x - RW / 2:.1f}" y="{y - RH / 2:.1f}" width="{RW}" height="{RH}" rx="11" class="{box_cls}" fill="{fill}" stroke="{FED_C[0]}" stroke-width="2.2"{dash}/>'
              + text(label, x, y, 15, "body", MUTED if dashed_box else INK, "dc-label") + '</g>')
 # legend for the dashed boxes
 lx, ly = FX - 150, FY + 40 + (nrows - 1) / 2 * STEP + 62
-P.append(f'<rect x="{lx - 20}" y="{ly - 11}" width="34" height="22" rx="6" fill="#F7FAFD" stroke="{FED_C[0]}" stroke-width="2" stroke-dasharray="5 4"/>')
+P.append(f'<rect class="dc-later" x="{lx - 20}" y="{ly - 11}" width="34" height="22" rx="6" fill="#F7FAFD" stroke="{FED_C[0]}" stroke-width="2" stroke-dasharray="5 4"/>')
 P.append(text("part of the federation, not (yet) in the project", lx + 170, ly, 15, "body", MUTED))
 
 # project

@@ -42,6 +42,24 @@ svg.durf-circles[data-active] .dc-inst:not(.is-on) { opacity: .4; }
 svg.durf-circles .dc-inst.is-on rect { fill: var(--dc-color); stroke: var(--dc-color); }
 svg.durf-circles .dc-inst.is-on .dc-label { fill: var(--dc-on); }
 @media (prefers-reduced-motion: reduce) { svg.durf-circles * { transition: none !important; } }
+/* Inline, the picture takes the page's colours: no white sheet, cards and tints on the page
+   background, text in the text colours, so it also reads well in dark mode. */
+svg.durf-circles { --dc-title: #134C78; }
+svg.durf-circles .dc-bg { fill: transparent; }
+svg.durf-circles .dc-ink { fill: var(--foreground); }
+svg.durf-circles .dc-muted { fill: var(--muted-foreground); }
+svg.durf-circles .dc-title { fill: var(--dc-title); }
+svg.durf-circles .dc-card { fill: var(--card, var(--background)); }
+svg.durf-circles .dc-tint { fill: color-mix(in srgb, var(--dc-c) 12%, var(--background)); }
+svg.durf-circles .dc-later { fill: color-mix(in srgb, #177ABF 6%, var(--background)); }
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) svg.durf-circles { --dc-title: #8EC5F0; }
+  :root:not([data-theme="light"]) svg.durf-circles .dc-tint,
+  :root:not([data-theme="light"]) svg.durf-circles .dc-card { stroke: color-mix(in srgb, var(--dc-c) 70%, #fff); }
+}
+:root[data-theme="dark"] svg.durf-circles { --dc-title: #8EC5F0; }
+:root[data-theme="dark"] svg.durf-circles .dc-tint,
+:root[data-theme="dark"] svg.durf-circles .dc-card { stroke: color-mix(in srgb, var(--dc-c) 70%, #fff); }
 dialog.durf-dialog {
   width: min(40rem, calc(100vw - 2rem));
   max-height: calc(100vh - 2rem);
