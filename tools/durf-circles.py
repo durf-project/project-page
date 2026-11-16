@@ -45,8 +45,8 @@ NOT_YET = [
 # OAI-PMH harvest list of the DURF dashboards, plus the KB.
 UNIS = ["eur", "leiden", "um", "ou", "ru", "tilburg", "tud", "tue", "uva", "rug", "uvh", "ut", "uu", "vu", "wur"]
 PROJECT = [
-    ("theme-leads", "Theme leads", ["kb", "surf", "leiden", "uva"]),
-    ("support", "Project lead\nand support", ["vu", "wur", "surf"]),
+    ("theme-leads", "Project, theme\nand tech leads", ["vu", "kb", "surf", "leiden", "uva", "wur"]),
+    ("support", "Support", ["surf"]),
     ("steering", "Steering\ngroup", ["vu", "um", "surf", "openaire"]),
     ("partners", "Cooperation\npartners", ["vu", "um", "eur", "ou", "ru", "rug", "tue", "tilburg", "leiden", "ut",
                                             "uu", "uvh", "wur", "aumc", "saxion"]),

@@ -8,8 +8,8 @@ eyebrow: Who takes care of the Corpus
 
 A shared resource needs clear boundaries: who takes care of it, and who takes part in the decisions about it (Ostrom's first design principle). For the Dutch Scholarly Communication Corpus that is the DURF Federation: the university libraries and other institutions that cooperate in DURF, together with the KB National Library, SURF and OpenAIRE.
 
-The DURF project helps the federation get organised, with theme leads, supporting roles and a steering group. The community groups are where the people who do the daily work meet: repository managers in WISH, CRIS managers in PUGNL, the library work groups of UKB, the Dutch OpenAIRE members in NaMeCo, and the Chiefs Open Science of Universities of the Netherlands (UNL) in COS.
+The DURF project helps the federation get organised, with a project lead, theme leads, a tech lead, supporting roles and a steering group. The community groups are where the people who do the daily work meet: repository managers in WISH, CRIS managers in PUGNL, the library work groups of UKB, the Dutch OpenAIRE members in NaMeCo, and the Chiefs Open Science of Universities of the Netherlands (UNL) in COS.
 
 Other organisations, such as DANS, CWI, RIVM and the Netherlands eScience Center, belong to the federation as well, even though they are not (yet) part of the project. Point at a circle, or tap it, to see who takes part.
 
-[![The DURF Federation in the middle, with the institutions that take care of the Corpus; on the left the DURF project with theme leads, project lead and support, steering group and cooperation partners; on the right the community groups WISH, PUGNL, UKB, NaMeCo and COS, connected to the federation](assets/img/durf-circles.svg)](assets/img/durf-circles.svg)
+[![The DURF Federation in the middle, with the institutions that take care of the Corpus; on the left the DURF project with project, theme and tech leads, support, steering group and cooperation partners; on the right the community groups WISH, PUGNL, UKB, NaMeCo and COS, connected to the federation](assets/img/durf-circles.svg)](assets/img/durf-circles.svg)
