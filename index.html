@@ -271,7 +271,9 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
         document.body.appendChild(dlg);
       }
       var people = (grp.people || []).map(function (p) {
-        var pic = p.photo ? '<img src="' + esc(p.photo) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement(\'span\'),{textContent:this.dataset.i}))" data-i="' + esc(initials(p.name)) + '">' : '<span>' + esc(initials(p.name)) + '</span>';
+        // the photo in assets/people/, then its source link, then initials
+        var pic = p.photo || p.photoSource ? '<img src="' + esc(p.photo || p.photoSource) + '" alt="" loading="lazy" referrerpolicy="no-referrer" data-alt="' + esc(p.photo ? p.photoSource || '' : '') + '"' +
+          ' onerror="if(this.dataset.alt){this.src=this.dataset.alt;this.dataset.alt=\'\'}else{this.replaceWith(Object.assign(document.createElement(\'span\'),{textContent:this.dataset.i}))}" data-i="' + esc(initials(p.name)) + '">' : '<span>' + esc(initials(p.name)) + '</span>';
         return '<li><span class="dc-face" style="--dc-c:' + esc(colour) + '">' + pic + '</span><span><strong>' + esc(p.name) + '</strong>' +
           (p.institution ? '<br>' + esc(p.institution) : '') + (p.role ? '<br><em>' + esc(p.role) + '</em>' : '') + '</span></li>';
       }).join('');
