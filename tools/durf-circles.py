@@ -130,45 +130,45 @@ for cy in cys:
 
 # federation: equal rounded rectangles in a regular grid; not yet in the project = dashed
 P.append(circle(FX, FY, FR, FED_C[1], FED_C[0], 4))
-P.append(text("DURF Federation", FX, FY - 330, 34, "title", NAVY))
+P.append(text("DURF Federation", FX, FY - 362, 38, "title", NAVY))
 member_of = {}
 for key, _, members in PROJECT:
     for m in members: member_of.setdefault(m, []).append(key)
 for key, _, _, members in COMMUNITIES:
     for m in members: member_of.setdefault(m, []).append(key)
-RW, RH, GAP, STEP, COLS = 158, 54, 12, 66, 5
+RW, RH, GAP, STEP, COLS = 200, 60, 12, 70, 4
 items = [(k, l, False) for k, l in IN_PROJECT] + [(k, l, True) for k, l in NOT_YET]
 nrows = math.ceil(len(items) / COLS)
 for i, (key, label, dashed_box) in enumerate(items):
     r, c = divmod(i, COLS)
     n = min(COLS, len(items) - r * COLS)
-    x = FX + (c - (n - 1) / 2) * (RW + GAP); y = FY + 40 + (r - (nrows - 1) / 2) * STEP
+    x = FX + (c - (n - 1) / 2) * (RW + GAP); y = FY - 6 + (r - (nrows - 1) / 2) * STEP
     dash = ' stroke-dasharray="7 6"' if dashed_box else ""
     box_cls = "dc-later" if dashed_box else "dc-card"
     name_attr = escape(" ".join(label.split()))
     fill = "#F7FAFD" if dashed_box else "#fff"
     P.append(f'<g class="dc-inst{" dc-inst--later" if dashed_box else ""}" data-key="{key}" data-name="{name_attr}" data-groups="{" ".join(member_of.get(key, []))}">'
              f'<rect x="{x - RW / 2:.1f}" y="{y - RH / 2:.1f}" width="{RW}" height="{RH}" rx="11" class="{box_cls}" fill="{fill}" stroke="{FED_C[0]}" stroke-width="2.2"{dash}/>'
-             + text(label, x, y, 15, "body", MUTED if dashed_box else INK, "dc-label") + '</g>')
+             + text(label, x, y, 18.5, "body", MUTED if dashed_box else INK, "dc-label") + '</g>')
 # legend for the dashed boxes
-lx, ly = FX - 150, FY + 40 + (nrows - 1) / 2 * STEP + 62
+lx, ly = FX - 190, FY - 6 + (nrows - 1) / 2 * STEP + 58
 P.append(f'<rect class="dc-later" x="{lx - 20}" y="{ly - 11}" width="34" height="22" rx="6" fill="#F7FAFD" stroke="{FED_C[0]}" stroke-width="2" stroke-dasharray="5 4"/>')
-P.append(text("part of the federation, not (yet) in the project", lx + 170, ly, 15, "body", MUTED))
+P.append(text("part of the federation, not (yet) in the project", lx + 205, ly, 18.5, "body", MUTED))
 
 # project
 P.append(circle(LX, LY, LR, PROJ_C[1], PROJ_C[0], 3))
-P.append(text("DURF project", LX, LY - 135, 26, "title", INK))
+P.append(text("DURF project", LX, LY - 138, 30, "title", INK))
 for (dx, dy), (key, label, _) in zip([(-64, -30), (64, -30), (-64, 92), (64, 92)], PROJECT):
     st = GROUP_C[key][0]
     P.append(f'<g class="dc-group" {group_attrs(key, label, GROUP_C[key])}>'
-             + circle(LX + dx, LY + dy, 58, "#fff", st, 3, "dc-dot") + text(label, LX + dx, LY + dy, 16.5, "body", INK) + '</g>')
+             + circle(LX + dx, LY + dy, 60, "#fff", st, 3, "dc-dot") + text(label, LX + dx, LY + dy, 19, "body", INK) + '</g>')
 
 # communities
 for cy, (key, name, sub, _) in zip(cys, COMMUNITIES):
     st, fi, _ = GROUP_C[key]
     P.append(f'<g class="dc-group" {group_attrs(key, name, GROUP_C[key])}>'
-             + circle(CX, cy, CR, fi, st, 3.5, "dc-dot") + text(name, CX, cy - 15, 25, "title", INK)
-             + text(sub, CX, cy + 24, 15, "body", MUTED) + '</g>')
+             + circle(CX, cy, CR, fi, st, 3.5, "dc-dot") + text(name, CX, cy - 17, 30, "title", INK)
+             + text(sub, CX, cy + 25, 18, "body", MUTED) + '</g>')
 
 svg = (f'<svg xmlns="http://www.w3.org/2000/svg" class="durf-circles" viewBox="0 0 {W} {H}" width="{W}" height="{H}" role="img" aria-labelledby="dc-t">\n'
        f'<title id="dc-t">The DURF Federation with its institutions, the DURF project and the community groups WISH, PUGNL, UKB, NaMeCo and COS</title>\n'
