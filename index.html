@@ -54,11 +54,14 @@ dialog.dc-people { width: min(46rem, calc(100vw - 2rem)); }
 /* ?embed&only=federation: just this one section, e.g. for a presentation */
 html[data-only] #durf-sections > section:not([data-only-keep]) { display: none !important; }
 html[data-only] .durf-subnav, html[data-only] .durf-footer, html[data-only] #durf-feedback { display: none !important; }
-html[data-only] [data-only-keep] { padding-block: .5rem !important; }
+html[data-only], html[data-only] body { overflow: hidden; height: 100%; }
+html[data-only] [data-only-keep] { padding: 0 !important; margin: 0 !important; }
+html[data-only] [data-only-keep] > *, html[data-only] [data-only-keep] .durf-shell, html[data-only] [data-only-keep] .durf-section-head { max-width: none !important; padding: 0 !important; margin: 0 !important; }
 /* only the picture of the federation section, as large as the window allows */
 html[data-only="federation"] #federation .durf-section-head > :not(.dc-wrap) { display: none; }
 html[data-only="federation"] #federation .dc-wrap { overflow: visible; }
-html[data-only="federation"] #federation svg.durf-circles { width: auto !important; max-width: 100%; height: calc(100vh - 1.5rem); margin: 0 auto; }
+html[data-only="federation"] #federation .dc-wrap { position: fixed; inset: 0; z-index: 10; display: grid; place-items: center; background: var(--background); border-radius: 0; }
+html[data-only="federation"] #federation svg.durf-circles { width: 100% !important; max-width: 100%; height: 100%; margin: 0; }
 /* Inline, the picture takes the page's colours: no white sheet, cards and tints on the page
    background, text in the text colours, so it also reads well in dark mode. */
 svg.durf-circles { --dc-title: #134C78; }
