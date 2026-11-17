@@ -19,5 +19,4 @@ missing, the page tries `photoSource` and otherwise shows initials.
 | lois-van-zomeren.jpg | Lois van Zomeren | photo supplied by Maurice |
 | marielle-prevoo.jpg | Mariëlle Prevoo | photo supplied by Maurice |
 | paolo-manghi.jpg | Paolo Manghi | OpenAIRE (images.prismic.io) |
-
-Still missing: `till-bey.jpg` (no reachable portrait found).
+| till-bey.jpg | Till Bey | photo supplied by Maurice (ResearchGate profile photo) |
