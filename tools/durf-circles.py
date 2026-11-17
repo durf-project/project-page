@@ -145,8 +145,9 @@ for i, (key, label, dashed_box) in enumerate(items):
     x = FX + (c - (n - 1) / 2) * (RW + GAP); y = FY + 40 + (r - (nrows - 1) / 2) * STEP
     dash = ' stroke-dasharray="7 6"' if dashed_box else ""
     box_cls = "dc-later" if dashed_box else "dc-card"
+    name_attr = escape(" ".join(label.split()))
     fill = "#F7FAFD" if dashed_box else "#fff"
-    P.append(f'<g class="dc-inst{" dc-inst--later" if dashed_box else ""}" data-key="{key}" data-groups="{" ".join(member_of.get(key, []))}">'
+    P.append(f'<g class="dc-inst{" dc-inst--later" if dashed_box else ""}" data-key="{key}" data-name="{name_attr}" data-groups="{" ".join(member_of.get(key, []))}">'
              f'<rect x="{x - RW / 2:.1f}" y="{y - RH / 2:.1f}" width="{RW}" height="{RH}" rx="11" class="{box_cls}" fill="{fill}" stroke="{FED_C[0]}" stroke-width="2.2"{dash}/>'
              + text(label, x, y, 15, "body", MUTED if dashed_box else INK, "dc-label") + '</g>')
 # legend for the dashed boxes

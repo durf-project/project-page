@@ -42,6 +42,23 @@ svg.durf-circles[data-active] .dc-inst:not(.is-on) { opacity: .4; }
 svg.durf-circles .dc-inst.is-on rect { fill: var(--dc-color); stroke: var(--dc-color); }
 svg.durf-circles .dc-inst.is-on .dc-label { fill: var(--dc-on); }
 @media (prefers-reduced-motion: reduce) { svg.durf-circles * { transition: none !important; } }
+dialog.dc-people { width: min(46rem, calc(100vw - 2rem)); }
+.dc-people-list { list-style: none; margin: .5rem 0 1rem; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(16rem, 1fr)); gap: .875rem 1.25rem; }
+.dc-people-list li { display: grid; grid-template-columns: 3.5rem 1fr; gap: .75rem; align-items: center; font-size: .9375rem; line-height: 1.35; }
+.dc-people-list em { color: var(--muted-foreground); font-style: normal; font-size: .875rem; }
+.dc-face { width: 3.5rem; height: 3.5rem; border-radius: 50%; overflow: hidden; display: grid; place-items: center;
+  box-shadow: 0 0 0 .1875rem var(--dc-c); background: color-mix(in srgb, var(--dc-c) 18%, var(--background));
+  font-family: var(--font-heading); font-weight: 800; color: var(--foreground); }
+.dc-face img { width: 100%; height: 100%; object-fit: cover; }
+.dc-insts { font-size: .875rem; color: var(--muted-foreground); }
+/* ?embed&only=federation: just this one section, e.g. for a presentation */
+html[data-only] #durf-sections > section:not([data-only-keep]) { display: none !important; }
+html[data-only] .durf-subnav, html[data-only] .durf-footer, html[data-only] #durf-feedback { display: none !important; }
+html[data-only] [data-only-keep] { padding-block: .5rem !important; }
+/* only the picture of the federation section, as large as the window allows */
+html[data-only="federation"] #federation .durf-section-head > :not(.dc-wrap) { display: none; }
+html[data-only="federation"] #federation .dc-wrap { overflow: visible; }
+html[data-only="federation"] #federation svg.durf-circles { width: auto !important; max-width: 100%; height: calc(100vh - 1.5rem); margin: 0 auto; }
 /* Inline, the picture takes the page's colours: no white sheet, cards and tints on the page
    background, text in the text colours, so it also reads well in dark mode. */
 svg.durf-circles { --dc-title: #134C78; }
@@ -211,7 +228,7 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
         g.addEventListener('mouseleave', function () { show(pinned); });
         g.addEventListener('focus', function () { show(g); });
         g.addEventListener('blur', function () { show(pinned); });
-        g.addEventListener('click', function () { pinned = pinned === g ? null : g; show(pinned || g); if (!pinned) show(null); });
+        g.addEventListener('click', function () { pinned = g; show(g); openPeople(g, svg); });
         g.addEventListener('keydown', function (e) {
           if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); g.dispatchEvent(new MouseEvent('click')); }
           if (e.key === 'Escape') { pinned = null; show(null); }
@@ -220,6 +237,52 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
     }).catch(function () { /* keep the plain image */ });
   }
   document.addEventListener('durf:rendered', circles);
+  var only = new URLSearchParams(location.search).get('only');
+  if (only) {
+    document.documentElement.setAttribute('data-only', only);
+    document.addEventListener('durf:rendered', function () {
+      var s = document.getElementById(only);
+      if (s) s.setAttribute('data-only-keep', '');
+    });
+  }
+
+  // Clicking a circle opens a dialog with the people in it (content/people.json) and the
+  // institutions it lights up in the federation. Without a photo a person gets initials.
+  var peopleData = null;
+  function loadPeople() {
+    if (!peopleData) peopleData = fetch('content/people.json').then(function (r) { return r.ok ? r.json() : { groups: {} }; }).catch(function () { return { groups: {} }; });
+    return peopleData;
+  }
+  function esc(s) { return String(s == null ? '' : s).replace(/[&<>"]/g, function (c) { return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;' }[c]; }); }
+  function initials(n) { return n.split(/\s+/).filter(function (w) { return /^[A-Z]/.test(w); }).map(function (w) { return w[0]; }).join('').slice(0, 2) || '?'; }
+  function openPeople(g, svg) {
+    var key = g.dataset.group, colour = g.dataset.color;
+    loadPeople().then(function (data) {
+      var grp = (data.groups || {})[key] || {};
+      var title = grp.title || g.getAttribute('aria-label').replace(/: show who takes part$/, '');
+      var names = Array.prototype.filter.call(svg.querySelectorAll('.dc-inst'), function (i) {
+        return (' ' + i.dataset.groups + ' ').indexOf(' ' + key + ' ') >= 0;
+      }).map(function (i) { return i.dataset.name || i.dataset.key; }).filter(function (n) { return n !== 'and more ...'; });
+      var dlg = document.getElementById('dc-people');
+      if (!dlg) {
+        dlg = document.createElement('dialog');
+        dlg.id = 'dc-people'; dlg.className = 'durf-dialog dc-people'; dlg.setAttribute('closedby', 'any');
+        dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+        document.body.appendChild(dlg);
+      }
+      var people = (grp.people || []).map(function (p) {
+        var pic = p.photo ? '<img src="' + esc(p.photo) + '" alt="" loading="lazy" referrerpolicy="no-referrer" onerror="this.replaceWith(Object.assign(document.createElement(\'span\'),{textContent:this.dataset.i}))" data-i="' + esc(initials(p.name)) + '">' : '<span>' + esc(initials(p.name)) + '</span>';
+        return '<li><span class="dc-face" style="--dc-c:' + esc(colour) + '">' + pic + '</span><span><strong>' + esc(p.name) + '</strong>' +
+          (p.institution ? '<br>' + esc(p.institution) : '') + (p.role ? '<br><em>' + esc(p.role) + '</em>' : '') + '</span></li>';
+      }).join('');
+      dlg.innerHTML = '<form method="dialog"><header style="border-top:.375rem solid ' + esc(colour) + '"><p class="durf-dialog-kicker">The federation and its circles</p><h3>' + esc(title) + '</h3></header>' +
+        '<div class="durf-dialog-body">' + (grp.about ? '<p>' + esc(grp.about) + '</p>' : '') +
+        (people ? '<ul class="dc-people-list">' + people + '</ul>' : '') +
+        (names.length ? '<p class="dc-insts"><strong>Institutions (' + names.length + '):</strong> ' + names.map(esc).join(', ') + '</p>' : '') +
+        '</div><footer><button type="submit">Close</button></footer></form>';
+      dlg.showModal();
+    });
+  }
   document.addEventListener('click', function (e) {
     var more = e.target.closest && e.target.closest('[data-corpus-dialog]');
     if (!more) return;
