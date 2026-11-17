@@ -15,9 +15,9 @@ missing, the page tries `photoSource` and otherwise shows initials.
 | rutger-de-jong.jpg | Rutger de Jong | universiteitleiden.nl (official portrait) |
 | cristina-huidiu.jpg | Cristina Huidiu | LinkedIn profile photo |
 | pascal-braak.jpg | Pascal Braak | LinkedIn profile photo |
-| jeroen-bosman.jpg | Jeroen Bosman | niso.org/people/jeroen-bosman (headshot) |
-| lois-van-zomeren.jpg | Lois van Zomeren | vu.nl (official profile photo, Team Digital Services and Infrastructure) |
-| marielle-prevoo.jpg | Mariëlle Prevoo | maastrichtuniversity.nl/mjl-prevoo (official portrait) |
+| jeroen-bosman.jpg | Jeroen Bosman | LinkedIn article image (cropped to face) |
+| lois-van-zomeren.jpg | Lois van Zomeren | photo supplied by Maurice |
+| marielle-prevoo.jpg | Mariëlle Prevoo | photo supplied by Maurice |
 | paolo-manghi.jpg | Paolo Manghi | OpenAIRE (images.prismic.io) |
 
 Still missing: `till-bey.jpg` (no reachable portrait found).
