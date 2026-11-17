@@ -1,0 +1,106 @@
+{
+  "_about": "People per circle in 'The federation and its circles'. Clicking a circle opens a dialog with these people; the institutions in the circle come from the picture itself (tools/durf-circles.py). photo is optional: without one, the dialog shows initials. Sources: DURF project participants list and proposal (section 4.2), UNL COS page, ukb.nl members page (November 2026).",
+  "groups": {
+    "theme-leads": {
+      "title": "Project, theme and tech leads",
+      "people": [
+        { "name": "Lois van Zomeren", "institution": "VU Amsterdam", "role": "Project lead" },
+        { "name": "Simone Kortekaas", "institution": "KB National Library", "role": "Theme 1 lead, Governance", "photo": "https://media.licdn.com/dms/image/v2/C4D03AQH63ui828Se9w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1592212405899?e=2147483647&v=beta&t=Rcjl44BVNvKEna1krIl_6I4B7a9KsyRObUS1a4SwZNE" },
+        { "name": "Maurice Vanderfeesten", "institution": "SURF", "role": "Theme 1 lead, Governance", "photo": "https://objectstore.surf.nl/mastodon/accounts/avatars/110/859/562/712/683/441/original/a42737b4eed5ebfc.jpg" },
+        { "name": "Rutger de Jong", "institution": "Leiden University", "role": "Theme 2 lead, Metadata, and theme 5 lead, Discovery", "photo": "https://www.universiteitleiden.nl/binaries/content/gallery/ul2/portraits/bibliotheken/rutger_de_jong.jpg/rutger_de_jong.jpg/d600x315" },
+        { "name": "Pascal Braak", "institution": "University of Amsterdam", "role": "Theme 3 lead, Full text", "photo": "https://media.licdn.com/dms/image/v2/C4D03AQHlmLGdSvPV5w/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1544631237080?e=2147483647&v=beta&t=oN1EHF1Jzum_WN5pYKW7S26fIB_-2q-iwIWBzlCwMCA" },
+        { "name": "Ingeborg Verheul", "institution": "KB National Library", "role": "Theme 4 lead, Archive", "photo": "https://www.amsterdamtimemachine.nl/wp-content/uploads/2025/07/Portret_Ingeborg-Verheul_Monique-Kooijmans-modified.png" },
+        { "name": "Vacant", "institution": "", "role": "Theme 6 lead, Portal" },
+        { "name": "Cristina Huidiu", "institution": "Wageningen University & Research", "role": "Tech lead", "photo": "https://media.licdn.com/dms/image/v2/C4E03AQF3WMcFt6_ZHw/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1651577689403?e=2147483647&v=beta&t=AaCis3QVRtJxEMyGzrknleSMi0TZLg2Rh1fKUfkmmxI" }
+      ]
+    },
+    "support": {
+      "title": "Support",
+      "people": [
+        { "name": "Melanie Fuchs", "institution": "SURF", "role": "Project office manager" },
+        { "name": "Till Bey", "institution": "SURF", "role": "Information architect", "photo": "https://i1.rgstatic.net/ii/profile.image/454748286525443-1485431848947_Q512/Till-Bey-2.jpg" },
+        { "name": "Eloy Sanchez", "institution": "SURF", "role": "Developer" },
+        { "name": "Margriet Miedema", "institution": "SURF", "role": "Community manager" }
+      ]
+    },
+    "steering": {
+      "title": "Steering group",
+      "people": [
+        { "name": "Hilde van Wijngaarden", "institution": "VU Amsterdam", "role": "Chair and executive", "photo": "https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/65ff09ac-5dfd-4acb-8850-dd0aa7a779af/Hilde%20van%20Wijngaarden%20UB%20VU%20foto%20MW%201000px.jpg" },
+        { "name": "Mariëlle Prevoo", "institution": "Maastricht University", "role": "Senior user" },
+        { "name": "John Doove", "institution": "SURF", "role": "Senior supplier", "photo": "https://media.licdn.com/dms/image/v2/D4D03AQFckvaL5G87bQ/profile-displayphoto-shrink_200_200/profile-displayphoto-shrink_200_200/0/1730213292237?e=2147483647&v=beta&t=-2H3OHFmlMNEOZM3O4c27GERqgE8d9pzNl2ODgKCI9I" },
+        { "name": "Paolo Manghi", "institution": "OpenAIRE", "role": "Senior supplier" }
+      ]
+    },
+    "partners": {
+      "title": "Cooperation partners",
+      "people": [
+        { "name": "Alexey Pristupa", "institution": "VU Amsterdam", "role": "Contact" },
+        { "name": "Mariëlle Prevoo", "institution": "Maastricht University", "role": "Contact" },
+        { "name": "Lucinda Jones", "institution": "Erasmus University Rotterdam", "role": "Contact" },
+        { "name": "Wouter Peeters", "institution": "Open Universiteit", "role": "Contact" },
+        { "name": "Mirjam Koreman", "institution": "Radboud University", "role": "Contact" },
+        { "name": "Wiebe van der Meer", "institution": "University of Groningen", "role": "Contact" },
+        { "name": "Inez Mekers", "institution": "TU Eindhoven", "role": "Contact" },
+        { "name": "Daan Rutten", "institution": "Tilburg University", "role": "Contact" },
+        { "name": "Jacko Koster", "institution": "Leiden University", "role": "Contact" },
+        { "name": "Wiljan Puttenstein", "institution": "University of Twente", "role": "Contact" },
+        { "name": "Ingrid de Ruiter", "institution": "Utrecht University", "role": "Contact" },
+        { "name": "Emma Overmaat", "institution": "University of Humanistic Studies", "role": "Contact" },
+        { "name": "Hubert Krekels", "institution": "Wageningen University & Research", "role": "Contact" },
+        { "name": "Lieuwe Kool", "institution": "Amsterdam UMC", "role": "Contact, for the university medical centres (NFU)" },
+        { "name": "Sarah Coombs", "institution": "Saxion", "role": "Contact, for the universities of applied sciences" }
+      ]
+    },
+    "wish": { "title": "WISH, repository managers", "about": "The Edustandaard subworking group on research metadata. It has no public member list; the institutions shown are those with a repository in the DURF harvest list." },
+    "pugnl": { "title": "PUGNL, CRIS managers", "about": "The user group of the Pure CRIS systems in the Netherlands: the OpenAIRE-compatible CRIS systems in the SURF ORI DuckLake." },
+    "ukb": {
+      "title": "UKB, library work groups",
+      "about": "The Dutch university libraries and the KB National Library, with associated members.",
+      "people": [
+        { "name": "Lucinda Jones", "institution": "Erasmus University Rotterdam", "role": "Member" },
+        { "name": "Geertrui Verbraak", "institution": "KB National Library", "role": "Member" },
+        { "name": "Rune Meerman", "institution": "Radboud University", "role": "Member" },
+        { "name": "Marjolein Nieboer", "institution": "University of Groningen", "role": "Member" },
+        { "name": "Irene Haslinger", "institution": "TU Delft", "role": "Member, treasurer" },
+        { "name": "Paul Hofman", "institution": "TU Eindhoven", "role": "Member" },
+        { "name": "Kurt de Belder", "institution": "Leiden University", "role": "Member" },
+        { "name": "Claudia van Oppen", "institution": "Maastricht University", "role": "Member" },
+        { "name": "Marjolein Beumer", "institution": "Tilburg University", "role": "Member" },
+        { "name": "Olga Steen", "institution": "University of Twente", "role": "Member" },
+        { "name": "Wiljan Puttenstein", "institution": "University of Twente", "role": "Member" },
+        { "name": "Mirte van der Zouwen", "institution": "Utrecht University", "role": "Member" },
+        { "name": "Carlos Reijnen", "institution": "University of Amsterdam", "role": "Member" },
+        { "name": "Hilde van Wijngaarden", "institution": "VU Amsterdam", "role": "Member", "photo": "https://assets-us-01.kc-usercontent.com/d8b6f1f5-816c-005b-1dc1-e363dd7ce9a5/65ff09ac-5dfd-4acb-8850-dd0aa7a779af/Hilde%20van%20Wijngaarden%20UB%20VU%20foto%20MW%201000px.jpg" },
+        { "name": "Martine Pronk", "institution": "Wageningen University & Research", "role": "Member" },
+        { "name": "Aline Korterink", "institution": "KNAW", "role": "Associated member" },
+        { "name": "Hans de Jonge", "institution": "NWO", "role": "Associated member" },
+        { "name": "Merle Achten", "institution": "Open Universiteit", "role": "Associated member" }
+      ]
+    },
+    "nameco": { "title": "NaMeCo, NL OpenAIRE members", "about": "The Dutch members of OpenAIRE, working towards a National Membership Consortium." },
+    "cos": {
+      "title": "COS, UNL Chiefs Open Science",
+      "about": "The Open Science coordinators of every Dutch university, within Universities of the Netherlands (UNL).",
+      "people": [
+        { "name": "Darco Jansen", "institution": "Universities of the Netherlands", "role": "Chair" },
+        { "name": "Willem Scholten", "institution": "Erasmus University Rotterdam", "role": "Chief Open Science" },
+        { "name": "Mariëlle Prevoo", "institution": "Maastricht University", "role": "Chief Open Science" },
+        { "name": "Mellanie Geijen", "institution": "Open Universiteit", "role": "Chief Open Science" },
+        { "name": "Dirk van Gorp", "institution": "Radboud University", "role": "Chief Open Science" },
+        { "name": "Ana Ranitovic", "institution": "University of Groningen", "role": "Chief Open Science" },
+        { "name": "Paul Hofman", "institution": "TU Eindhoven", "role": "Chief Open Science" },
+        { "name": "Marjolein Beumer", "institution": "Tilburg University", "role": "Chief Open Science" },
+        { "name": "Daan Rutten", "institution": "Tilburg University", "role": "Chief Open Science" },
+        { "name": "Franklin van der Hoeven", "institution": "TU Delft", "role": "Chief Open Science" },
+        { "name": "Karlijn Hermans", "institution": "Leiden University", "role": "Chief Open Science" },
+        { "name": "Wiljan Puttenstein", "institution": "University of Twente", "role": "Chief Open Science" },
+        { "name": "Paul Boselie", "institution": "Utrecht University", "role": "Chief Open Science" },
+        { "name": "Bert Bakker", "institution": "University of Amsterdam", "role": "Chief Open Science" },
+        { "name": "Sander Bosch", "institution": "VU Amsterdam", "role": "Chief Open Science" },
+        { "name": "Martine Pronk", "institution": "Wageningen University & Research", "role": "Chief Open Science" },
+        { "name": "Robbert Hoogstraat", "institution": "University of Humanistic Studies", "role": "Chief Open Science" }
+      ]
+    }
+  }
+}
