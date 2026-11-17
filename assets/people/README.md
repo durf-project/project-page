@@ -9,5 +9,14 @@ missing, the page tries `photoSource` and otherwise shows initials.
 | --- | --- | --- |
 | maurice-vanderfeesten.jpg | Maurice Vanderfeesten | objectstore.surf.nl (Mastodon avatar) |
 | ingeborg-verheul.jpg | Ingeborg Verheul | amsterdamtimemachine.nl |
-
-The other photos listed in `content/people.json` (`photoSource`) still have to be added here.
+| john-doove.jpg | John Doove | LinkedIn profile photo |
+| hilde-van-wijngaarden.jpg | Hilde van Wijngaarden | vu.nl (official portrait, UB VU) |
+| simone-kortekaas.jpg | Simone Kortekaas | LinkedIn profile photo |
+| rutger-de-jong.jpg | Rutger de Jong | universiteitleiden.nl (official portrait) |
+| cristina-huidiu.jpg | Cristina Huidiu | LinkedIn profile photo |
+| pascal-braak.jpg | Pascal Braak | LinkedIn profile photo |
+| jeroen-bosman.jpg | Jeroen Bosman | LinkedIn article image (cropped to face) |
+| lois-van-zomeren.jpg | Lois van Zomeren | photo supplied by Maurice |
+| marielle-prevoo.jpg | Mariëlle Prevoo | photo supplied by Maurice |
+| paolo-manghi.jpg | Paolo Manghi | OpenAIRE (images.prismic.io) |
+| till-bey.jpg | Till Bey | photo supplied by Maurice (ResearchGate profile photo) |
