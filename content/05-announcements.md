@@ -23,8 +23,6 @@ The proposal was submitted with your help in early 2025, we received the green l
 
 We will inform you about the thematic objectives and the activities we coordinate to achieve them, and about how each institution can contribute in concrete terms. Because areas of interest and expertise differ between institutions, we use the day to establish who can contribute to what. This concerns first of all the in-kind contribution during the project period, but we will also address our shared responsibility for maintaining the infrastructure after 2030 and continuing to benefit from it.
 
-**[Open the presentation of the day](https://durf-project.github.io/federation-day-2026/)**: the slides, with the pub quiz you can play on your phone.
-
 #### Programme
 
 The drop-in lunch starts at 12:00. Please be on time: the official programme begins at 12:45.
