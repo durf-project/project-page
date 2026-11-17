@@ -9,5 +9,15 @@ missing, the page tries `photoSource` and otherwise shows initials.
 | --- | --- | --- |
 | maurice-vanderfeesten.jpg | Maurice Vanderfeesten | objectstore.surf.nl (Mastodon avatar) |
 | ingeborg-verheul.jpg | Ingeborg Verheul | amsterdamtimemachine.nl |
+| john-doove.jpg | John Doove | LinkedIn profile photo |
+| hilde-van-wijngaarden.jpg | Hilde van Wijngaarden | vu.nl (official portrait, UB VU) |
+| simone-kortekaas.jpg | Simone Kortekaas | LinkedIn profile photo |
+| rutger-de-jong.jpg | Rutger de Jong | universiteitleiden.nl (official portrait) |
+| cristina-huidiu.jpg | Cristina Huidiu | LinkedIn profile photo |
+| pascal-braak.jpg | Pascal Braak | LinkedIn profile photo |
+| jeroen-bosman.jpg | Jeroen Bosman | niso.org/people/jeroen-bosman (headshot) |
+| lois-van-zomeren.jpg | Lois van Zomeren | vu.nl (official profile photo, Team Digital Services and Infrastructure) |
+| marielle-prevoo.jpg | Mariëlle Prevoo | maastrichtuniversity.nl/mjl-prevoo (official portrait) |
+| paolo-manghi.jpg | Paolo Manghi | OpenAIRE (images.prismic.io) |
 
-The other photos listed in `content/people.json` (`photoSource`) still have to be added here.
+Still missing: `till-bey.jpg` (no reachable portrait found).
