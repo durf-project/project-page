@@ -32,7 +32,8 @@ The drop-in lunch starts at 12:00. Please be on time: the official programme beg
 | 12:00 – 12:45 | Lunch |
 | 12:45 – 13:05 | Opening by host John Doove |
 | 13:05 – 13:25 | The strategic importance of DURF, presented by Hilde van Wijngaarden |
-| 13:25 – 13:45 | The DURF project plan and the importance of collaboration, presented by Maurice Vanderfeesten |
+| 13:25 – 13:40 | The DURF project plan and the importance of collaboration, presented by Maurice Vanderfeesten |
+| 13:40 – 13:45 | Coffee break |
 | 13:45 – 15:15 | Deep dive into DURF's six work packages (interactive carousel), with the [theme posters](https://durf-project.github.io/durf-gantt/posters/) |
 | 15:15 – 16:00 | Keynote by Jeroen Bosman: "Resilience of open science and the research commons in times of crisis" |
 | 16:00 – 17:00 | Drinks reception |
