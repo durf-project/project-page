@@ -20,3 +20,4 @@ missing, the page tries `photoSource` and otherwise shows initials.
 | marielle-prevoo.jpg | Mariëlle Prevoo | photo supplied by Maurice |
 | paolo-manghi.jpg | Paolo Manghi | OpenAIRE (images.prismic.io) |
 | till-bey.jpg | Till Bey | photo supplied by Maurice (ResearchGate profile photo) |
+| melanie-fuchs.jpg | Melanie Fuchs | photo supplied by Maurice |
