@@ -237,6 +237,14 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
           if (e.key === 'Escape') { pinned = null; show(null); }
         });
       });
+      openGroup = function (key) {
+        var g = svg.querySelector('.dc-group[data-group="' + key + '"]');
+        if (!g) return;
+        var sec = document.getElementById('federation');
+        if (sec) sec.scrollIntoView({ behavior: 'instant' });
+        pinned = g; show(g); openPeople(g, svg);
+      };
+      openFromHash();
     }).catch(function () { /* keep the plain image */ });
   }
   document.addEventListener('durf:rendered', circles);
@@ -252,6 +260,22 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
   // Clicking a circle opens a dialog with the people in it (content/people.json) and the
   // institutions it lights up in the federation. Without a photo a person gets initials.
   var peopleData = null;
+  // Deep links: #cooperation-partners and the like open that circle's dialog. Clicking a circle
+  // puts its address in the address bar, so it can be copied and shared.
+  var SLUGS = { 'theme-leads': 'project-theme-and-tech-leads', support: 'support', steering: 'steering-group', partners: 'cooperation-partners',
+    wish: 'wish', pugnl: 'pugnl', ukb: 'ukb', nameco: 'nameco', cos: 'cos' };
+  function keyOfHash() {
+    var h = decodeURIComponent(location.hash.slice(1));
+    for (var k in SLUGS) if (SLUGS[k] === h || k === h) return k;
+    return null;
+  }
+  var openGroup = null;   // set once the federation picture is in the page
+  function openFromHash() {
+    var k = keyOfHash(), dlg = document.getElementById('dc-people');
+    if (k && openGroup) openGroup(k);
+    else if (!k && dlg && dlg.open) dlg.close();   // another link on the page: close the circle
+  }
+  window.addEventListener('hashchange', openFromHash);
   function loadPeople() {
     if (!peopleData) peopleData = fetch('content/people.json').then(function (r) { return r.ok ? r.json() : { groups: {} }; }).catch(function () { return { groups: {} }; });
     return peopleData;
@@ -271,6 +295,7 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
         dlg = document.createElement('dialog');
         dlg.id = 'dc-people'; dlg.className = 'durf-dialog dc-people'; dlg.setAttribute('closedby', 'any');
         dlg.addEventListener('click', function (e) { if (e.target === dlg) dlg.close(); });
+        dlg.addEventListener('close', function () { if (keyOfHash()) history.replaceState(null, '', '#federation'); });
         document.body.appendChild(dlg);
       }
       var people = (grp.people || []).map(function (p) {
@@ -285,7 +310,8 @@ dialog.durf-dialog footer button:focus-visible { outline: .125rem solid var(--ac
         (people ? '<ul class="dc-people-list">' + people + '</ul>' : '') +
         (names.length ? '<p class="dc-insts"><strong>Institutions (' + names.length + '):</strong> ' + names.map(esc).join(', ') + '</p>' : '') +
         '</div><footer><button type="submit">Close</button></footer></form>';
-      dlg.showModal();
+      if (!dlg.open) dlg.showModal();
+      if (SLUGS[key] && keyOfHash() !== key) history.replaceState(null, '', '#' + SLUGS[key]);
     });
   }
   document.addEventListener('click', function (e) {
