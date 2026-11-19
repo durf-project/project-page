@@ -7,7 +7,7 @@ eyebrow: News
 
 ## Announcements, newest first
 
-Open an item to read it; a link can open one straight away, like this one to [looking back on the first DURF Federation Day](#looking-back-on-the-first-durf-federation-day).
+Open an item to read it; a link can open one straight away, like this one to [looking back on the first DURF Federation Day](#looking-back-on-the-first-durf-federation-day). Longer stories appear as blog posts in the [Open Research Information community](https://communities.surf.nl/open-research-information) on SURF Communities: join it to stay informed, and share your own news there too.
 
 <!-- One "###" item per announcement, newest first. Put the date on a "date:" line straight
      under the heading. The heading becomes the link anchor: "### DURF Federation Day" is
