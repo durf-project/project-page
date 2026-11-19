@@ -39,9 +39,9 @@ The tables gave us a lot of feedback. We will process all of it and come back to
 - **Discovery (theme 5).** Institutions are at very different points; some are far ahead and could lead an area and share their work with everyone. DOI minting already runs in several repositories. Open questions: which licences keep us from sharing metadata, where does our metadata come from, and which elements are still missing in the aggregators?
 - **Portal (theme 6).** Who is the Netherlands Research Portal for? Ideas ranged from a shop window for our data through APIs, to a view for librarians on full-text coverage and data quality, to an expert finder. Concerns were data quality, availability and a clear business case. Everyone agreed the portal is the icing on the cake of DURF's core goals, so let us make it a useful one.
 
-#### One more question for the cooperation partners
+#### From commitment to names
 
-At the tables we did not always get to names and numbers. So we will send the coordinators of the cooperation partners one more question: who in your organisation can help with which activity and in-kind contribution, and in which role? It works like the posters, online: [who in your organisation can help?](https://durf-project.github.io/durf-gantt/survey/)
+When we applied to Open Science NL, each cooperation partner committed to an in-kind contribution. Since the Federation Day we all know much better what those contributions involve, but at the tables we did not always get to names. So we ask the coordinators of the cooperation partners to make the commitment of their institution concrete: who in your organisation takes on which activity and in-kind contribution, and in which role? It works like the posters, online: [your in-kind contribution: who does what?](https://durf-project.github.io/durf-gantt/survey/)
 
 #### Keynote: how resilient are we?
 
