@@ -19,7 +19,7 @@ date: 19 November 2026
 
 ![More than thirty participants of the first DURF Federation Day wave in front of the opening slide: "Making the Dutch scholarly corpus global, open and resilient". Some hold up coloured pieces of the DURF logo.](assets/img/federation-day-2026.jpg)
 
-On 18 November more than thirty people from the Dutch university libraries, the KB National Library, SURF, OpenAIRE and the Chiefs Open Science came together at SURF Utrecht for the first DURF Federation Day. Thank you all for coming, for your questions and for your ideas. You can look back at the whole afternoon in [the presentation of the day](https://durf-project.github.io/federation-day-2026/).
+On 18 November more than thirty people came together at SURF Utrecht for the first DURF Federation Day: the project team and the steering group, and our cooperation partners: directors and staff of the university libraries, the KB National Library, SURF, OpenAIRE and the Chiefs Open Science. Thank you all for coming, for your questions and for your ideas. You can look back at the whole afternoon in [the presentation of the day](https://durf-project.github.io/federation-day-2026/).
 
 #### A deeper understanding of DURF, table by table
 
@@ -48,7 +48,7 @@ Read more in his blog post with Jeroen Sondervan, [The resilience of open scienc
 
 #### Pub quiz
 
-John also presented the pub quiz, and he did it brilliantly. Twenty-eight players answered eight questions on their phones, from what DURF stands for to what DARE stood for, with points for speed and double points for the last question. Till won with 7,750 points, ahead of Kurt De Belder (5,950) and Eileen (5,925). Congratulations!
+John also presented the pub quiz, and he did it brilliantly. Twenty-eight players answered eight questions on their phones, from what DURF stands for to what DARE stood for, with points for speed and double points for the last question. Till came first with 7,750 points, ahead of Kurt De Belder (5,950) and Eileen (5,925). Strictly speaking, Till and Eileen are part of the project team and should not have played along, but we let it pass: Till joined SURF as information architect Open Science only a year ago, and knowing the field this well already is quite an achievement. That makes Kurt De Belder, library director of Leiden University, the winner among our guests. Fitting, for a quiz that ended with DARE: Kurt was already library director in Leiden when the DARE programme ran there, with John as one of its project staff. A familiar face in this community, with a deep knowledge of its history. Congratulations to all three!
 
 See you at the next Federation Day.
 
