@@ -21,6 +21,8 @@ date: 19 November 2026
 
 On 18 November more than thirty people came together at SURF Utrecht for the first DURF Federation Day: the project team and the steering group, and our cooperation partners: directors and staff of the university libraries, the KB National Library, SURF, OpenAIRE and the Chiefs Open Science. Thank you all for coming, for your questions and for your ideas. You can look back at the whole afternoon in [the presentation of the day](https://durf-project.github.io/federation-day-2026/).
 
+This post also appears in the Open Research Information community: [Six pieces, one puzzle: looking back on the first DURF Federation Day](https://communities.surf.nl/open-research-information/artikel/six-pieces-one-puzzle-looking-back-on-the-first-durf-federation) on SURF Communities.
+
 #### A deeper understanding of DURF, table by table
 
 Host John Doove opened the day. Hilde van Wijngaarden explained the strategic importance of DURF, and Maurice Vanderfeesten walked through the project plan and the [roadmap](https://durf-project.github.io/durf-gantt/). Then the theme carousel started: at six tables the theme leads explained the goal of their theme, its activities and what we ask from institutions, using the [theme posters](https://durf-project.github.io/durf-gantt/posters/). Moving from table to table, everyone left with a much better picture of what DURF is, how the six themes fit together, and where their own institution comes in.
