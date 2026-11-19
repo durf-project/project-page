@@ -59,3 +59,11 @@ with coloured blocks; without them the round DURF logo is shown).
 
 The page loads these files with `fetch`, so open it through a small web server rather than as a file:
 `python3 -m http.server 8000` in the repository folder, then go to http://localhost:8000.
+
+## Links straight to a circle
+
+A link can open one circle of "The federation and its circles" with its people:
+`#cooperation-partners`, `#steering-group`, `#support`, `#project-theme-and-tech-leads`,
+`#wish`, `#pugnl`, `#ukb`, `#nameco` and `#cos`, for example
+https://durf-project.github.io/project-page/#cooperation-partners. Clicking a circle puts its
+address in the address bar, so it can be copied. The addresses are set in `SLUGS` in `index.html`.
