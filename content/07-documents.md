@@ -23,6 +23,26 @@ Why Dutch libraries should commit to a shared infrastructure, and what they pled
 
 - [Read the position paper](https://durf-project.github.io/position-paper/)
 
+### Project proposal
+
+tags: Document, 2025
+
+![The first page of the DURF project proposal](assets/screens/project-proposal.webp)
+
+The full proposal for the Open Science NL infrastructure call, as submitted in 2025: goals, themes, work plan and partners. Contact and financial details removed.
+
+- [Read the proposal (PDF)](assets/docs/durf-full-proposal-open-science-nl.pdf)
+
+### Together for a resilient open infrastructure
+
+tags: Blog post
+
+![DURF: Together for a Resilient Open Infrastructure, a blog post on SURF Communities](assets/screens/blog-resilient-open-infrastructure.webp)
+
+Resilience and sovereignty: why the Dutch libraries, the KB and SURF sent in the DURF proposal. On SURF Communities.
+
+- [Read the blog post](https://communities.surf.nl/en/open-research-information/article/durf-together-for-a-resilient-open-infrastructure)
+
 ### Roadmap
 
 tags: Planning

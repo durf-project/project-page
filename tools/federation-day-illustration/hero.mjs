@@ -1,0 +1,10 @@
+import { chromium } from '/opt/node-tools/node_modules/playwright/index.mjs';
+const b = await chromium.launch({ executablePath: '/opt/pw-browsers/chromium', args: ['--no-sandbox'] });
+const p = await (await b.newContext({ viewport: { width: 1600, height: 960 }, deviceScaleFactor: 2, colorScheme: 'light' })).newPage();
+await p.goto('https://durf-project.github.io/federation-day-2026/#1'); await p.waitForTimeout(5000);
+await p.addStyleTag({ content: '.deck-ui{display:none!important} .slide::after{display:none!important} .slide.is-current .hero__sub{visibility:hidden}' }); await p.waitForTimeout(300);
+const box = await p.evaluate(() => { const r = document.querySelector('.slide.is-current').getBoundingClientRect(); return { x: r.x, y: r.y + 2, width: r.width, height: r.height - 2 }; });
+await p.screenshot({ path: 'hero-slide.png', clip: box });
+const bg = await p.evaluate(() => getComputedStyle(document.querySelector('.slide.is-current')).backgroundColor);
+console.log(box, bg);
+await b.close();

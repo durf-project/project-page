@@ -7,11 +7,50 @@ eyebrow: News
 
 ## Announcements, newest first
 
-Open an item to read it; a link can open one straight away, like this one to the [DURF Federation Day](#durf-federation-day).
+Open an item to read it; a link can open one straight away, like this one to [looking back on the first DURF Federation Day](#looking-back-on-the-first-durf-federation-day).
 
 <!-- One "###" item per announcement, newest first. Put the date on a "date:" line straight
      under the heading. The heading becomes the link anchor: "### DURF Federation Day" is
      #durf-federation-day. Items stay collapsed until a visitor opens them. -->
+
+### Looking back on the first DURF Federation Day
+
+date: 19 November 2026
+
+![More than thirty participants of the first DURF Federation Day wave in front of the opening slide: "Making the Dutch scholarly corpus global, open and resilient". Some hold up coloured pieces of the DURF logo.](assets/img/federation-day-2026.jpg)
+
+On 18 November more than thirty people from the Dutch university libraries, the KB National Library, SURF, OpenAIRE and the Chiefs Open Science came together at SURF Utrecht for the first DURF Federation Day. Thank you all for coming, for your questions and for your ideas. You can look back at the whole afternoon in [the presentation of the day](https://durf-project.github.io/federation-day-2026/).
+
+#### A deeper understanding of DURF, table by table
+
+Host John Doove opened the day. Hilde van Wijngaarden explained the strategic importance of DURF, and Maurice Vanderfeesten walked through the project plan and the [roadmap](https://durf-project.github.io/durf-gantt/). Then the theme carousel started: at six tables the theme leads explained the goal of their theme, its activities and what we ask from institutions, using the [theme posters](https://durf-project.github.io/durf-gantt/posters/). Moving from table to table, everyone left with a much better picture of what DURF is, how the six themes fit together, and where their own institution comes in.
+
+The tables gave us a lot of feedback. We will process all of it and come back to you through the themes. A small impression of what we heard:
+
+- **Governance (theme 1).** How do we deal with the difference in maturity between larger and smaller repositories? Could the position paper set a minimum level that everyone reaches within a set time, and give an estimate of the costs? How can CC0 metadata be kept from unwanted commercial use? Be clear about which types of publications we all add, and what stays a local choice. Information about DURF now reaches institutions in pieces: a key contact per institution would help.
+- **Archive (theme 4).** Archiving in the KB e-Depot was seen as a no-brainer; the KB is asked to take the lead in telling institutions what it needs from them. Questions touched on version management, duplicates harvested from several institutions, Taverne publications, grey literature and publications of universities of applied sciences.
+- **Discovery (theme 5).** Institutions are at very different points; some are far ahead and could lead an area and share their work with everyone. DOI minting already runs in several repositories. Open questions: which licences keep us from sharing metadata, where does our metadata come from, and which elements are still missing in the aggregators?
+- **Portal (theme 6).** Who is the Netherlands Research Portal for? Ideas ranged from a shop window for our data through APIs, to a view for librarians on full-text coverage and data quality, to an expert finder. Concerns were data quality, availability and a clear business case. Everyone agreed the portal is the icing on the cake of DURF's core goals, so let us make it a useful one.
+
+#### One more question for the cooperation partners
+
+At the tables we did not always get to names and numbers. So we will send the coordinators of the cooperation partners one more question: who in your organisation can help with which activity and in-kind contribution, and in which role? It works like the posters, online: [who in your organisation can help?](https://durf-project.github.io/durf-gantt/survey/)
+
+#### Keynote: how resilient are we?
+
+Jeroen Bosman (Utrecht University) closed with an inspiring keynote: [*Resilient open science: weathering storms with policies, infrastructures and communities*](https://edu.nl/cpcqc). Resilience is about prevention, protection, resistance, withstanding and repair, for systems, communities and individuals alike. He ended with ten questions for repositories and DURF. Three of them we take home, to check whether the project gives them enough attention:
+
+- **"Are repositories known, recognised and understood by researchers and university leadership?"** Food for thought for the [position paper](https://durf-project.github.io/position-paper/): which words make boards see why this matters, such as *digital sovereignty*?
+- **"Are sharing rights and the status of repositories in publisher contracts strong and clear enough?"** A topic for the [UKB Licences working group](https://ukb.nl/en/ukb-working-groups/licences/), and in DURF for the CC0 licence for metadata and the agreements with publishers on full-text copies in our repositories.
+- **"Do we have enough copies, mirrors, (dark) archives and rerouting options?"** With the KB e-Depot we have a strong archive, but have we ever tested the escape routes?
+
+Read more in his blog post with Jeroen Sondervan, [The resilience of open science in times of crisis](https://doi.org/10.54900/pqrcx-8d019).
+
+#### Pub quiz
+
+John also presented the pub quiz, and he did it brilliantly. Twenty-eight players answered eight questions on their phones, from what DURF stands for to what DARE stood for, with points for speed and double points for the last question. Till won with 7,750 points, ahead of Kurt De Belder (5,950) and Eileen (5,925). Congratulations!
+
+See you at the next Federation Day.
 
 ### DURF Federation Day
 
