@@ -11,7 +11,7 @@ The **Dutch Repository Federation (DURF)** is a four-year programme, from 1 June
 
 DURF reinforces the [Netherlands Research Portal](https://netherlands.openaire.eu/) and the institutional repository and CRIS landscape, so that Dutch scholarly output is more robust, sovereign and findable. Six themes run in parallel over the four years.
 
-Together, the libraries are the custodians of the *Dutch Scholarly Communication Corpus*. The position paper explains why that matters and what the signatories commit to.
+Together, the libraries are the custodians of the *Dutch Scholarly Communication Corpus*: the publicly funded, published scholarly works of Dutch research. It was created with public money, so it should be available to the public; that makes it a commons, a shared resource. The position paper explains why that matters and what the signatories commit to.
 
 The Corpus is not kept in one place. Each institution looks after its own part, in its own repository and CRIS, and shared services harvest, enrich, preserve and show it. Together they form a federated ecosystem: see [the DURF information chain](https://durf-project.github.io/position-paper/#the-durf-information-chain) in the position paper.
 
