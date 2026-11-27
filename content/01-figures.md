@@ -8,7 +8,7 @@ nav: Key figures
      never estimate. {theme-N} picks the colour of the line. Keep the sources below up to date. -->
 
 - {theme-1} **15** cooperation partners support DURF in kind
-- {theme-6} **3.4 million** records in the Dutch Scholarly Communication Corpus
+- {theme-6} **3.4 million** records in the Dutch Scholarly Knowledge Corpus
 - {theme-3} **66.8%** of the publications in Dutch CRIS systems have no file
 - {theme-2} **22 of 86** Dutch repositories and CRIS systems in OpenAIRE meet the current guidelines
 - {theme-4} **Unknown** files backed up in the KB e-Depot

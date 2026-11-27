@@ -44,7 +44,7 @@ The project lead coordinates the six themes and is the first point of contact fo
 
 ### Cooperation partners
 
-These institutions support DURF in kind (section 4.2 of the [project proposal](https://communities.surf.nl/files/Artikel/download/OS%20infra%20full-proposal%20DURF%20Dutch%20Repository%20Federation_ContactandFinancialinforemoved.pdf)) and, with the co-applicants, are the custodians of the Dutch Scholarly Communication Corpus.
+These institutions support DURF in kind (section 4.2 of the [project proposal](https://communities.surf.nl/files/Artikel/download/OS%20infra%20full-proposal%20DURF%20Dutch%20Repository%20Federation_ContactandFinancialinforemoved.pdf)) and, with the co-applicants, are the custodians of the Dutch Scholarly Knowledge Corpus.
 
 - Vrije Universiteit Amsterdam
 - Maastricht University

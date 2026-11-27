@@ -1,4 +1,4 @@
-"""Draw assets/img/durf-circles.svg: who takes care of the Dutch Scholarly Communication Corpus.
+"""Draw assets/img/durf-circles.svg: who takes care of the Dutch Scholarly Knowledge Corpus.
 In the middle the DURF Federation with its institutions, on the left the DURF project, on the
 right the community groups, connected to the federation by dashed lines.
 
