@@ -6,7 +6,7 @@ eyebrow: Who takes care of the Corpus
 
 ## The federation and its circles
 
-A shared resource needs clear boundaries: who takes care of it, and who takes part in the decisions about it (Ostrom's first design principle). For the Dutch Scholarly Communication Corpus that is the DURF Federation: the university libraries and other institutions that cooperate in DURF, together with the KB National Library, SURF and OpenAIRE.
+A shared resource needs clear boundaries: who takes care of it, and who takes part in the decisions about it (Ostrom's first design principle). For the Dutch Scholarly Knowledge Corpus that is the DURF Federation: the university libraries and other institutions that cooperate in DURF, together with the KB National Library, SURF and OpenAIRE.
 
 The DURF project helps the federation get organised, with a project lead, theme leads, a tech lead, supporting roles and a steering group. The community groups are where the people who do the daily work meet: repository managers in WISH, CRIS managers in PUGNL, the library work groups of UKB, the Dutch OpenAIRE members in NaMeCo, and the Chiefs Open Science of Universities of the Netherlands (UNL) in COS.
 
